@@ -1,101 +1,88 @@
-<h1 align="center">Hi 👋, I'm Vignesh G A</h1>
-<h3 align="center">B.Tech CSE Student | AI/ML Enthusiast | Frontend Developer from India 🇮🇳</h3>
+<!-- Animated Cyberpunk Header -->
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=00FFCC&height=220&section=header&text=Vignesh%20G%20A&fontSize=70&fontAlignY=38&fontColor=ffffff&desc=AI%20%26%20Prompt%20Engineer%20%7C%20Agentic%20AI%20Architect&descAlignY=58&descSize=22" />
+</div>
 
-<!-- Animated Typing Header -->
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=2196F3&center=true&vCenter=true&width=500&lines=AI%2FML+Enthusiast;Frontend+Developer;Building+impactful+products;Always+learning+and+exploring!" alt="Typing SVG" />
-</p>
+<!-- Futuristic Typing Animation -->
+<div align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=500&size=22&pause=1000&color=00FFCC&center=true&vCenter=true&width=800&lines=Architecting+Autonomous+AI+Systems;Prompt+Engineering+%26+LLM+Optimization;Exploring+Agentic+AI+%26+Workflow+Automation;Bridging+Neural+Networks+%26+Modern+Web" alt="Typing SVG" />
+  </a>
+</div>
 
----
+<br/>
 
-### 👨‍💻 About Me
+<!-- Sleek Social Badges -->
+<div align="center">
+  <a href="mailto:vigneshgnanasekaran8@gmail.com"><img src="https://img.shields.io/badge/Connect-000000?style=for-the-badge&logo=gmail&logoColor=00FFCC" alt="Email" /></a>
+  <a href="https://linkedin.com/in/vignesh-ga"><img src="https://img.shields.io/badge/Network-000000?style=for-the-badge&logo=linkedin&logoColor=00FFCC" alt="LinkedIn" /></a>
+  <a href="https://github.com/vicky-cmd-run"><img src="https://img.shields.io/badge/Code-000000?style=for-the-badge&logo=github&logoColor=00FFCC" alt="Github" /></a>
+</div>
 
-- 🎓 Pursuing **B.Tech in CSE** at **VIT-AP University** and a **Minor in AI** at **IIT Ropar x Masai**
-- 💼 Former **Frontend Development Intern** at **TAIZO.IN** 
-- 🔭 I’m currently focusing on **AI/ML projects, Deep Learning, Image Processing & Web Development**
-- 🌱 I’m actively learning **Advanced Neural Networks architectures (Transformers) & React.js**
-- 🏆 Certifications: **Google Cloud Computing Foundations**, **NPTEL Certified (Elite)**
-- 📫 How to reach me: **[vigneshgnanasekaran8@gmail.com](mailto:vigneshgnanasekaran8@gmail.com)**
+<br/>
 
----
+### <samp>&#10148; SYSTEM_INITIALIZATION: ABOUT_ME</samp>
 
-### 🛠️ Tech Stack & Tools
+> **Objective Array:** Designing cognitive architectures, engineering high-fidelity prompts, and driving the next generation of autonomous multi-agent systems via Agentic AI.
 
-**Programming Languages**
-<p align="left">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
-  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
-  <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black" alt="C" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="R" />
-</p>
+* **Current Vector:** Deeply immersed in **Agentic AI**, orchestrating autonomous AI agents, and mastering advanced prompt engineering frameworks (`LangChain`).
+* **Core Matrix:** Artificial Intelligence, Deep Learning (Transformers/CNNs), Large Language Models (LLMs), and Full-Stack Architecture.
+* **Academia:** B.Tech CSE @ VIT-AP & Minor in AI @ IIT Ropar x Masai.
+* **Nodes of Achievement:** Google Cloud Computing Foundations & NPTEL Certified.
 
-**AI, ML & Data Science**
-<p align="left">
-  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" />
-  <img src="https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white" alt="Keras" />
-  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV" />
-  <img src="https://img.shields.io/badge/Hugging%20Face%20Transformers-F9AB00?style=for-the-badge&logo=huggingface&logoColor=white" alt="Transformers" />
-  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
-</p>
+<br/>
 
-**Web Development & Tools**
-<p align="left">
-  <img src="https://img.shields.io/badge/React.js-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
-  <img src="https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white" alt="MUI" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit" />
-  <img src="https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="GCP" />
-</p>
+### <samp>&#10148; KNOWLEDGE_BASE: TECH_STACK</samp>
 
----
+**`> AI_AND_PROMPT_ENGINEERING`**  
+<img src="https://img.shields.io/badge/OpenAI-000000?style=for-the-badge&logo=openai&logoColor=00FFCC" />
+<img src="https://img.shields.io/badge/Hugging_Face-000000?style=for-the-badge&logo=huggingface&logoColor=00FFCC" />
+<img src="https://img.shields.io/badge/LangChain-000000?style=for-the-badge&logo=langchain&logoColor=00FFCC" />
+<img src="https://img.shields.io/badge/TensorFlow-000000?style=for-the-badge&logo=tensorflow&logoColor=00FFCC" />
+<img src="https://img.shields.io/badge/PyTorch-000000?style=for-the-badge&logo=pytorch&logoColor=00FFCC" />
+<img src="https://img.shields.io/badge/Keras-000000?style=for-the-badge&logo=keras&logoColor=00FFCC" />
+<img src="https://img.shields.io/badge/OpenCV-000000?style=for-the-badge&logo=opencv&logoColor=00FFCC" />
 
-### 🚀 Featured Projects & Research
+**`> LANGUAGES_AND_DATA`**  
+<img src="https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=00FFCC" />
+<img src="https://img.shields.io/badge/C%2B%2B-000000?style=for-the-badge&logo=c%2B%2B&logoColor=00FFCC" />
+<img src="https://img.shields.io/badge/R-000000?style=for-the-badge&logo=r&logoColor=00FFCC" />
+<img src="https://img.shields.io/badge/Pandas-000000?style=for-the-badge&logo=pandas&logoColor=00FFCC" />
 
-| Project Name | Description | Tech Stack |
+**`> WEB_ARCHITECTURE`**  
+<img src="https://img.shields.io/badge/React.js-000000?style=for-the-badge&logo=react&logoColor=00FFCC" />
+<img src="https://img.shields.io/badge/Streamlit-000000?style=for-the-badge&logo=streamlit&logoColor=00FFCC" />
+<img src="https://img.shields.io/badge/GCP-000000?style=for-the-badge&logo=google-cloud&logoColor=00FFCC" />
+
+<br/>
+
+### <samp>&#10148; EXECUTABLE_MODULES: FEATURED_PROJECTS</samp>
+
+| Model / Architecture | System Description | Tech Stack |
 | :--- | :--- | :--- |
-| **[Unlocking the Black Box (Explainable RUL Prediction)](#)** | Developed an explainable hybrid CNN-Transformer-BiLSTM model for Remaining Useful Life (RUL) prediction of aircraft engines using NASA C-MAPSS dataset. Utilized Integrated Gradients and SHAP. | `Python`, `TensorFlow`, `Transformers`, `SHAP` |
-| **[ExpRAI (Face Emotion Recognition)](#)** | Trained a DenseNet-based face emotion recognition model on the CK+ dataset, achieving 98.88% training accuracy. | `Python`, `TensorFlow`, `Keras`, `OpenCV` |
-| **[Mythra (Smart Cultural Storyteller)](#)** | Architected a web-based Multi-modal AI interface translating single-line text prompts into 10-14 scene illustrated stories using LLMs, Diffusion Models & Neural TTS. | `LLM`, `Diffusion Models`, `React` |
-| **[DataSculpt Analytics App](#)** | Designed a Streamlit app to analyze 20+ user activity logs, delivering insights into average daily time spent on social platforms. | `Python`, `Streamlit`, `Pandas` |
+| **[Unlocking the Black Box (RUL Prediction)](#)** | Explainable hybrid CNN-Transformer-BiLSTM for aircraft engine Remaining Useful Life prediction. Interpreted via Integrated Gradients & SHAP. | `TensorFlow` `Transformers` `SHAP` |
+| **[Mythra (Smart Cultural Storyteller)](#)** | Multi-modal AI architecture translating text prompts into 10-14 scene illustrated stories. Integrates LLMs, Diffusion Models & Neural TTS. | `LLM` `Diffusion` `React` |
+| **[ExpRAI (Face Emotion Recognition)](#)** | DenseNet-based face emotion recognition model resolving nuanced multi-class expressions with 98.88% accuracy on CK+. | `Keras` `OpenCV` `Python` |
+| **[DataSculpt Analytics App](#)** | Interactive dashboard analyzing user telemetry data to extract deep behavioral usage metrics and visualize platform engagement. | `Streamlit` `Pandas` |
 
-*(Note: Don't forget to link the repository URLs by replacing the `#` above!)*
+<br/>
 
----
-
-### 📊 GitHub Stats & Streak
-
-<p align="center">
-  <a href="https://github.com/vicky-cmd-run">
-    <img src="https://github-readme-stats.vercel.app/api?username=vicky-cmd-run&show_icons=true&theme=transparent&hide_border=true&title_color=2196F3&icon_color=2196F3&text_color=777777" alt="GitHub Stats" />
-  </a>
-  <a href="https://github.com/vicky-cmd-run">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=vicky-cmd-run&theme=transparent&hide_border=true&title_color=2196F3&icon_color=2196F3&text_color=777777" alt="GitHub Streak" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/vicky-cmd-run">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vicky-cmd-run&layout=compact&theme=transparent&hide_border=true&title_color=2196F3&text_color=777777" alt="Top Languages" />
-  </a>
-</p>
-
----
-
-### 🌐 Connect with Me
-
-<p align="center">
-  <a href="https://linkedin.com/in/vignesh-ga" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="mailto:vigneshgnanasekaran8@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-</p>
+### <samp>&#10148; TELEMETRY: GITHUB_METRICS</samp>
 
 <div align="center">
-  <br />
-  <i>"The best way to predict the future is to invent it." — Alan Kay</i>
+  <img src="https://github-readme-stats.vercel.app/api?username=vicky-cmd-run&show_icons=true&bg_color=000000&title_color=00FFCC&icon_color=00FFCC&text_color=ffffff&border_color=00FFCC&hide_border=false" alt="GitHub Stats" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=vicky-cmd-run&bg_color=000000&title_color=00FFCC&icon_color=00FFCC&text_color=ffffff&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&border_color=00FFCC&hide_border=false" alt="GitHub Streak" width="48%" />
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vicky-cmd-run&layout=compact&bg_color=000000&title_color=00FFCC&text_color=ffffff&border_color=00FFCC&hide_border=false" alt="Top Languages" width="60%" />
+</div>
+
+<br/>
+
+<!-- Subtle Animated Footer -->
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=transparent&color=00FFCC&height=100&section=footer&text=“The%20best%20way%20to%20predict%20the%20future%20is%20to%20invent%20it.”&fontSize=22&fontAlignY=50" />
 </div>
