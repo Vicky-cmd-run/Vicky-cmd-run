@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 840 180" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090e" />
+      <stop offset="100%" stop-color="#0a0c12" />
+    </linearGradient>
+    <pattern id="grid" width="15" height="15" patternUnits="userSpaceOnUse">
+      <path d="M 15 0 L 0 0 0 15" fill="none" stroke="#00FFCC" stroke-width="0.5" stroke-opacity="0.04" />
+    </pattern>
+    <filter id="tealGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&amp;family=Share+Tech+Mono&amp;display=swap');
+    
+    .mono-text {
+      font-family: 'Share Tech Mono', monospace;
+      fill: #ffffff;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
+    
+    .hud-header {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      fill: #00FFCC;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    .proj-title {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      fill: #ffffff;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+
+    .tag-bg {
+      fill: #121926;
+      stroke: #00FFCC;
+      stroke-opacity: 0.3;
+    }
+
+    .tag-text {
+      font-family: 'Share Tech Mono', monospace;
+      fill: #00FFCC;
+      font-size: 10px;
+    }
+
+    .bullet-point {
+      fill: #a0aec0;
+      font-size: 11.5px;
+    }
+
+    .pulse {
+      animation: blink 2s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 0.3; }
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="840" height="180" fill="url(#bgGrad)" rx="8" />
+  <rect width="840" height="180" fill="url(#grid)" rx="8" />
+  
+  <!-- Outer Border with Glowing Accent Corner -->
+  <rect x="10" y="10" width="820" height="160" fill="none" stroke="#00FFCC" stroke-width="1" stroke-opacity="0.15" rx="6" />
+  <path d="M 10 35 L 10 10 L 35 10" fill="none" stroke="#00FFCC" stroke-width="2" filter="url(#tealGlow)" />
+
+  <!-- Code/Module ID Tag -->
+  <text x="30" y="28" class="hud-header">[ MODULE_01: NEXUS_RECON_SYS ]</text>
+  <circle cx="280" cy="24" r="3" fill="#00FFCC" class="pulse" />
+
+  <!-- Project Title -->
+  <text x="30" y="52" class="proj-title">NEXUS – AI-Driven Financial Reconciliation</text>
+
+  <!-- Technology Badges -->
+  <g transform="translate(30, 62)">
+    <rect x="0" y="0" width="85" height="18" class="tag-bg" rx="3" />
+    <text x="42.5" y="12" text-anchor="middle" class="tag-text">TYPESCRIPT</text>
+
+    <rect x="90" y="0" width="55" height="18" class="tag-bg" rx="3" />
+    <text x="117.5" y="12" text-anchor="middle" class="tag-text">REACT</text>
+
+    <rect x="150" y="0" width="60" height="18" class="tag-bg" rx="3" />
+    <text x="180" y="12" text-anchor="middle" class="tag-text">PYTHON</text>
+
+    <rect x="215" y="0" width="105" height="18" class="tag-bg" rx="3" />
+    <text x="267.5" y="12" text-anchor="middle" class="tag-text">API_INTEGRATION</text>
+  </g>
+
+  <!-- Summary Bullets -->
+  <g transform="translate(30, 95)">
+    <!-- Point 1 -->
+    <text x="0" y="12" class="mono-text" fill="#00FFCC">&gt;</text>
+    <text x="15" y="12" class="mono-text bullet-point">Engineered full-stack financial reconciliation system, boosting discrepancy speed by <tspan fill="#00FFCC" font-weight="bold">80%</tspan>.</text>
+    
+    <!-- Point 2 -->
+    <text x="0" y="32" class="mono-text" fill="#00FFCC">&gt;</text>
+    <text x="15" y="32" class="mono-text bullet-point">Built data pipeline extracting/matching anomalies in 500+ invoices with <tspan fill="#ffffff" font-weight="bold">95% accuracy</tspan>.</text>
+    
+    <!-- Point 3 -->
+    <text x="0" y="52" class="mono-text" fill="#00FFCC">&gt;</text>
+    <text x="15" y="52" class="mono-text bullet-point">Deployed dynamic frontend with drill-down modals, reducing lookup times by <tspan fill="#00FFCC" font-weight="bold">40%</tspan>.</text>
+  </g>
+
+  <!-- Visual Widget Panel (Right) -->
+  <g transform="translate(670, 30)">
+    <rect width="130" height="120" fill="#0f131c" stroke="#00FFCC" stroke-width="1.5" stroke-opacity="0.2" rx="4" />
+    <text x="65" y="18" text-anchor="middle" class="tag-text" fill="#5a6b82" font-size="9">COMPARATIVE_TELEMETRY</text>
+    
+    <!-- Holographic Bar Matrix -->
+    <!-- Invoice A -->
+    <text x="12" y="44" class="mono-text" font-size="10" fill="#5a6b82">INV_A</text>
+    <rect x="50" y="37" width="65" height="8" fill="#141a24" rx="2" />
+    <rect x="50" y="37" width="55" height="8" fill="#8A2BE2" rx="2" />
+
+    <!-- Invoice B -->
+    <text x="12" y="66" class="mono-text" font-size="10" fill="#5a6b82">INV_B</text>
+    <rect x="50" y="59" width="65" height="8" fill="#141a24" rx="2" />
+    <rect x="50" y="59" width="48" height="8" fill="#e200ff" rx="2" />
+
+    <!-- Discrepancy Alert Visual -->
+    <g transform="translate(15, 85)">
+      <!-- Warning Triangle -->
+      <path d="M 12 5 L 22 22 L 2 22 Z" fill="none" stroke="#FF3366" stroke-width="1.5" filter="url(#tealGlow)">
+        <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite" />
+      </path>
+      <text x="35" y="17" class="mono-text" font-size="9" fill="#FF3366" font-weight="bold">MISMATCH_FOUND</text>
+      <!-- Delta stats readout -->
+      <text x="35" y="27" class="mono-text" font-size="8" fill="#5a6b82">RECON_RATIO: 95.8%</text>
+    </g>
+  </g>
+</svg>

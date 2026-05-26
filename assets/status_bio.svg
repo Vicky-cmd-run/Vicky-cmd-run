@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 840 160" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090e" />
+      <stop offset="100%" stop-color="#0b0e15" />
+    </linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00FFCC" stroke-width="0.5" stroke-opacity="0.04" />
+    </pattern>
+    <filter id="tealGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&amp;family=Share+Tech+Mono&amp;display=swap');
+    
+    .mono-text {
+      font-family: 'Share Tech Mono', monospace;
+      fill: #00FFCC;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+    }
+    
+    .label {
+      fill: #5a6b82;
+      font-weight: bold;
+    }
+
+    .value {
+      fill: #ffffff;
+    }
+
+    .hud-title {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: bold;
+      fill: #00FFCC;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="840" height="160" fill="url(#bgGrad)" rx="8" />
+  <rect width="840" height="160" fill="url(#grid)" rx="8" />
+  
+  <!-- Outer Border -->
+  <rect x="10" y="10" width="820" height="140" fill="none" stroke="#00FFCC" stroke-width="1" stroke-opacity="0.15" rx="6" />
+
+  <!-- Avatar HUD Box (Left) -->
+  <g transform="translate(30, 25)">
+    <rect width="110" height="110" fill="#0d1117" stroke="#00FFCC" stroke-width="1.5" stroke-opacity="0.3" rx="4" />
+    <path d="M 5 5 L 20 5 M 5 5 L 5 20 M 105 5 L 90 5 M 105 5 L 105 20 M 5 105 L 20 105 M 5 105 L 5 90 M 105 105 L 90 105 M 105 105 L 105 90" stroke="#00FFCC" stroke-width="2" filter="url(#tealGlow)" />
+    
+    <!-- Neon Holographic Brain Icon / Scanning lines -->
+    <path d="M 55 25 C 40 25 35 35 35 45 C 35 55 45 60 45 70 C 45 78 50 82 55 85 C 60 82 65 78 65 70 C 65 60 75 55 75 45 C 75 35 70 25 55 25 Z" fill="none" stroke="#00FFCC" stroke-width="2" stroke-opacity="0.8" filter="url(#tealGlow)" />
+    <path d="M 55 25 C 47 25 45 35 45 45 C 45 55 52 60 52 70" fill="none" stroke="#8A2BE2" stroke-width="1.5" stroke-opacity="0.7" />
+    <circle cx="55" cy="48" r="3" fill="#8A2BE2" />
+    <circle cx="48" cy="38" r="2" fill="#00FFCC" />
+    <circle cx="62" cy="38" r="2" fill="#00FFCC" />
+    <circle cx="43" cy="50" r="2" fill="#00FFCC" />
+    <circle cx="67" cy="50" r="2" fill="#00FFCC" />
+
+    <!-- Animated Scanning Line -->
+    <line x1="5" y1="20" x2="105" y2="20" stroke="#00FFCC" stroke-width="1.5" opacity="0.6">
+      <animate attributeName="y1" values="10;100;10" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="y2" values="10;100;10" dur="4s" repeatCount="indefinite" />
+    </line>
+  </g>
+
+  <!-- Bio & Education Info (Middle) -->
+  <g transform="translate(170, 25)">
+    <!-- Section Title -->
+    <text x="0" y="10" class="hud-title">&lt; IDENTITY_SPECIFICATION &gt;</text>
+    
+    <!-- Info List -->
+    <text x="0" y="32" class="mono-text label">USER_CODENAME:<tspan class="value" fill="#ffffff"> Vignesh G A</tspan></text>
+    
+    <text x="0" y="52" class="mono-text label">BIOLOGICAL_OBJ:<tspan class="value" fill="#ffffff"> Architecting cognitive multi-agent workflows,</tspan></text>
+    <text x="110" y="68" class="mono-text value">designing highly-optimized prompt loops x neural architectures.</text>
+
+    <!-- Education Info -->
+    <text x="0" y="92" class="mono-text label">ACADEMIC_NODE_1:<tspan class="value" fill="#ffffff"> VIT-AP Univ. | B.Tech CSE (Aug 2023 - May 2027)</tspan></text>
+    <text x="0" y="110" class="mono-text label">ACADEMIC_NODE_2:<tspan class="value" fill="#ffffff"> IIT Ropar x Masai | Minor in AI (Aug 2025 - May 2026)</tspan></text>
+  </g>
+
+  <!-- Real-time Status Gauges (Right) -->
+  <g transform="translate(640, 25)">
+    <text x="0" y="10" class="hud-title">&lt; COGNITIVE_TELEM &gt;</text>
+
+    <!-- Progress Meter 1 -->
+    <text x="0" y="32" class="mono-text" font-size="11" fill="#5a6b82">AGENT_POWER (98%)</text>
+    <rect x="0" y="38" width="160" height="6" fill="#141923" rx="3" />
+    <rect x="0" y="38" width="156" height="6" fill="#00FFCC" rx="3" filter="url(#tealGlow)" />
+
+    <!-- Progress Meter 2 -->
+    <text x="0" y="62" class="mono-text" font-size="11" fill="#5a6b82">LOGIC_SYNCH (95%)</text>
+    <rect x="0" y="68" width="160" height="6" fill="#141923" rx="3" />
+    <rect x="0" y="68" width="152" height="6" fill="#8A2BE2" rx="3" />
+
+    <!-- Progress Meter 3 -->
+    <text x="0" y="92" class="mono-text" font-size="11" fill="#5a6b82">SYNAPTIC_BW (88%)</text>
+    <rect x="0" y="98" width="160" height="6" fill="#141923" rx="3" />
+    <rect x="0" y="98" width="140" height="6" fill="#00FFCC" rx="3" opacity="0.7" />
+  </g>
+</svg>

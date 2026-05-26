@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 840 180" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090e" />
+      <stop offset="100%" stop-color="#0a0c12" />
+    </linearGradient>
+    <pattern id="grid" width="15" height="15" patternUnits="userSpaceOnUse">
+      <path d="M 15 0 L 0 0 0 15" fill="none" stroke="#00FFCC" stroke-width="0.5" stroke-opacity="0.04" />
+    </pattern>
+    <filter id="tealGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="magentaGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.88   0 0 0 0 0.0   0 0 0 0 1.0   0 0 0 0.5 0" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&amp;family=Share+Tech+Mono&amp;display=swap');
+    
+    .mono-text {
+      font-family: 'Share Tech Mono', monospace;
+      fill: #ffffff;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+    }
+    
+    .hud-header {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      fill: #e200ff;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    .proj-title {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      fill: #ffffff;
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+
+    .tag-bg {
+      fill: #121926;
+      stroke: #e200ff;
+      stroke-opacity: 0.3;
+    }
+
+    .tag-text {
+      font-family: 'Share Tech Mono', monospace;
+      fill: #e200ff;
+      font-size: 10px;
+    }
+
+    .bullet-point {
+      fill: #a0aec0;
+      font-size: 11.5px;
+    }
+
+    .pulse {
+      animation: blink 2.2s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 0.3; }
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="840" height="180" fill="url(#bgGrad)" rx="8" />
+  <rect width="840" height="180" fill="url(#grid)" rx="8" />
+  
+  <!-- Outer Border with Glowing Accent Corner -->
+  <rect x="10" y="10" width="820" height="160" fill="none" stroke="#e200ff" stroke-width="1" stroke-opacity="0.15" rx="6" />
+  <path d="M 10 35 L 10 10 L 35 10" fill="none" stroke="#e200ff" stroke-width="2" filter="url(#magentaGlow)" />
+
+  <!-- Code/Module ID Tag -->
+  <text x="30" y="28" class="hud-header">[ MODULE_03: MYTHRA_ORCHESTRATOR ]</text>
+  <circle cx="310" cy="24" r="3" fill="#e200ff" class="pulse" />
+
+  <!-- Project Title -->
+  <text x="30" y="52" class="proj-title">MYTHRA – Multimodal Storyteller Orchestrator</text>
+
+  <!-- Technology Badges -->
+  <g transform="translate(30, 62)">
+    <rect x="0" y="0" width="60" height="18" class="tag-bg" rx="3" />
+    <text x="30" y="12" text-anchor="middle" class="tag-text">PYTHON</text>
+
+    <rect x="65" y="0" width="55" height="18" class="tag-bg" rx="3" />
+    <text x="92.5" y="12" text-anchor="middle" class="tag-text">REACT</text>
+
+    <rect x="125" y="0" width="90" height="18" class="tag-bg" rx="3" />
+    <text x="170" y="12" text-anchor="middle" class="tag-text">LLM_INTEGRATION</text>
+
+    <rect x="220" y="0" width="95" height="18" class="tag-bg" rx="3" />
+    <text x="267.5" y="12" text-anchor="middle" class="tag-text">DIFFUSION_TTS</text>
+  </g>
+
+  <!-- Summary Bullets -->
+  <g transform="translate(30, 95)">
+    <!-- Point 1 -->
+    <text x="0" y="12" class="mono-text" fill="#e200ff">&gt;</text>
+    <text x="15" y="12" class="mono-text bullet-point">Built end-to-end pipeline integrating <tspan fill="#ffffff" font-weight="bold">3 AI models (LLMs, Text-to-Image, TTS)</tspan> via REST APIs.</text>
+    
+    <!-- Point 2 -->
+    <text x="0" y="32" class="mono-text" fill="#e200ff">&gt;</text>
+    <text x="15" y="32" class="mono-text bullet-point">Optimized asynchronous queues, decreasing overall generation latency by <tspan fill="#e200ff" font-weight="bold">45%</tspan>.</text>
+    
+    <!-- Point 3 -->
+    <text x="0" y="52" class="mono-text" fill="#e200ff">&gt;</text>
+    <text x="15" y="52" class="mono-text bullet-point">Created interactive UI handling <tspan fill="#ffffff" font-weight="bold">5 concurrent service streams</tspan> with structured state logs.</text>
+  </g>
+
+  <!-- Visual Widget Panel (Right) - Multimodal pipeline flowchart -->
+  <g transform="translate(670, 30)">
+    <rect width="130" height="120" fill="#0f131c" stroke="#e200ff" stroke-width="1.5" stroke-opacity="0.2" rx="4" />
+    <text x="65" y="18" text-anchor="middle" class="tag-text" fill="#5a6b82" font-size="9">PIPELINE_ORCHESTRATION</text>
+    
+    <!-- Box: Prompt Input -->
+    <rect x="15" y="32" width="100" height="14" fill="#141a24" stroke="#5a6b82" stroke-opacity="0.5" rx="2" />
+    <text x="65" y="42" text-anchor="middle" class="mono-text" font-size="8" fill="#a0aec0">INPUT_PROMPT</text>
+
+    <!-- Arrow -->
+    <path d="M 65 46 L 65 54" stroke="#e200ff" stroke-width="1" />
+    
+    <!-- Box: LLM Core -->
+    <rect x="15" y="54" width="100" height="16" fill="#1b172a" stroke="#e200ff" stroke-width="1" rx="2" filter="url(#magentaGlow)" />
+    <text x="65" y="65" text-anchor="middle" class="mono-text" font-size="9" fill="#ffffff" font-weight="bold">COGNITIVE_LLM</text>
+
+    <!-- Arrows splitting -->
+    <path d="M 40 70 L 40 84" stroke="#e200ff" stroke-width="1" />
+    <path d="M 90 70 L 90 84" stroke="#e200ff" stroke-width="1" />
+    <path d="M 40 76 L 90 76" stroke="#e200ff" stroke-width="1" />
+
+    <!-- Box: Text-to-Image -->
+    <rect x="10" y="84" width="52" height="15" fill="#141a24" stroke="#00FFCC" stroke-opacity="0.5" rx="2" />
+    <text x="36" y="94" text-anchor="middle" class="mono-text" font-size="7.5" fill="#00FFCC">DIFFUSION</text>
+
+    <!-- Box: TTS -->
+    <rect x="68" y="84" width="52" height="15" fill="#141a24" stroke="#8A2BE2" stroke-opacity="0.5" rx="2" />
+    <text x="94" y="94" text-anchor="middle" class="mono-text" font-size="7.5" fill="#8A2BE2">NEURAL_TTS</text>
+
+    <!-- Connectors to output -->
+    <path d="M 36 99 L 36 108" stroke="#00FFCC" stroke-width="1" />
+    <path d="M 94 99 L 94 108" stroke="#8A2BE2" stroke-width="1" />
+    <path d="M 36 104 L 94 104" stroke="#e200ff" stroke-width="1" />
+    
+    <!-- Output Box -->
+    <rect x="15" y="108" width="100" height="6" fill="#00FFCC" rx="3" filter="url(#tealGlow)">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+    </rect>
+    
+    <text x="65" y="124" text-anchor="middle" class="tag-text" font-size="8" fill="#e200ff">LATENCY: ~35 SEC</text>
+  </g>
+</svg>
