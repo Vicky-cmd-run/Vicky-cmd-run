@@ -1,12 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 840 180" fill="none">
   <defs>
+    <!-- Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#07090e" />
-      <stop offset="100%" stop-color="#0a0c12" />
+      <stop offset="0%" stop-color="#080a10" />
+      <stop offset="100%" stop-color="#0a0c14" />
     </linearGradient>
+    
+    <!-- Grid Pattern -->
     <pattern id="grid" width="15" height="15" patternUnits="userSpaceOnUse">
       <path d="M 15 0 L 0 0 0 15" fill="none" stroke="#00FFCC" stroke-width="0.5" stroke-opacity="0.04" />
     </pattern>
+    
+    <!-- Glow Filter -->
     <filter id="tealGlow" x="-10%" y="-10%" width="120%" height="120%">
       <feGaussianBlur stdDeviation="3" result="blur" />
       <feMerge>
@@ -17,29 +22,27 @@
   </defs>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&amp;family=Share+Tech+Mono&amp;display=swap');
-    
     .mono-text {
-      font-family: 'Share Tech Mono', monospace;
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
       fill: #ffffff;
-      font-size: 12px;
+      font-size: 11.5px;
       letter-spacing: 0.5px;
     }
     
     .hud-header {
-      font-family: 'Orbitron', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       font-weight: 700;
       fill: #00FFCC;
-      font-size: 11px;
+      font-size: 10.5px;
       letter-spacing: 2px;
     }
 
     .proj-title {
-      font-family: 'Orbitron', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       font-weight: 700;
       fill: #ffffff;
-      font-size: 16px;
-      letter-spacing: 1px;
+      font-size: 15.5px;
+      letter-spacing: 0.5px;
     }
 
     .tag-bg {
@@ -49,23 +52,14 @@
     }
 
     .tag-text {
-      font-family: 'Share Tech Mono', monospace;
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;
       fill: #00FFCC;
-      font-size: 10px;
+      font-size: 9.5px;
     }
 
     .bullet-point {
       fill: #a0aec0;
       font-size: 11.5px;
-    }
-
-    .pulse {
-      animation: blink 3s infinite;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 0.9; }
-      50% { opacity: 0.3; }
     }
   </style>
 
@@ -74,83 +68,76 @@
   <rect width="840" height="180" fill="url(#grid)" rx="8" />
   
   <!-- Outer Border with Glowing Accent Corner -->
-  <rect x="10" y="10" width="820" height="160" fill="none" stroke="#00FFCC" stroke-width="1" stroke-opacity="0.15" rx="6" />
+  <rect x="10" y="10" width="820" height="160" fill="none" stroke="#00FFCC" stroke-width="1.2" stroke-opacity="0.15" rx="6" />
   <path d="M 10 35 L 10 10 L 35 10" fill="none" stroke="#00FFCC" stroke-width="2" filter="url(#tealGlow)" />
 
   <!-- Code/Module ID Tag -->
-  <text x="30" y="28" class="hud-header">[ MODULE_04: PROFESSIONAL_EXP ]</text>
-  <circle cx="270" cy="24" r="3" fill="#00FFCC" class="pulse" />
+  <text x="30" y="28" class="hud-header">[ CORE_MODULE_04: PROFESSIONAL_EXPERIENCE ]</text>
 
   <!-- Project Title -->
   <text x="30" y="52" class="proj-title">Taizo.in – Frontend Development Intern</text>
 
   <!-- Technology Badges -->
   <g transform="translate(30, 62)">
-    <rect x="0" y="0" width="55" height="18" class="tag-bg" rx="3" />
-    <text x="27.5" y="12" text-anchor="middle" class="tag-text">REACT.JS</text>
+    <rect x="0" y="0" width="60" height="18" class="tag-bg" rx="3" />
+    <text x="30" y="12" text-anchor="middle" class="tag-text">REACT.JS</text>
 
-    <rect x="60" y="0" width="75" height="18" class="tag-bg" rx="3" />
-    <text x="97.5" y="12" text-anchor="middle" class="tag-text">MATERIAL_UI</text>
+    <rect x="65" y="0" width="80" height="18" class="tag-bg" rx="3" />
+    <text x="105" y="12" text-anchor="middle" class="tag-text">MATERIAL_UI</text>
 
-    <rect x="140" y="0" width="95" height="18" class="tag-bg" rx="3" />
-    <text x="187.5" y="12" text-anchor="middle" class="tag-text">UX_OPTIMIZATION</text>
+    <rect x="150" y="0" width="95" height="18" class="tag-bg" rx="3" />
+    <text x="197.5" y="12" text-anchor="middle" class="tag-text">UX_OPTIMIZATION</text>
 
-    <rect x="240" y="0" width="105" height="18" class="tag-bg" rx="3" />
-    <text x="292.5" y="12" text-anchor="middle" class="tag-text">RESPONSIVE_GRID</text>
+    <rect x="250" y="0" width="105" height="18" class="tag-bg" rx="3" />
+    <text x="302.5" y="12" text-anchor="middle" class="tag-text">RESPONSIVE_GRID</text>
   </g>
 
-  <!-- Summary Bullets -->
-  <g transform="translate(30, 95)">
-    <!-- Point 1 -->
+  <!-- Spaced Bullet Points -->
+  <g transform="translate(30, 96)">
     <text x="0" y="12" class="mono-text" fill="#00FFCC">&gt;</text>
     <text x="15" y="12" class="mono-text bullet-point">Developed and optimized 5+ scalable modules, improving responsiveness by <tspan fill="#00FFCC" font-weight="bold">30%</tspan>.</text>
     
-    <!-- Point 2 -->
-    <text x="0" y="32" class="mono-text" fill="#00FFCC">&gt;</text>
-    <text x="15" y="32" class="mono-text bullet-point">Built 4 dashboards with real-time telemetry, increasing user engagement by <tspan fill="#ffffff" font-weight="bold">25%</tspan>.</text>
+    <text x="0" y="35" class="mono-text" fill="#00FFCC">&gt;</text>
+    <text x="15" y="35" class="mono-text bullet-point">Built 4 real-time visual dashboards, boosting client platform engagement by <tspan fill="#ffffff" font-weight="bold">25%</tspan>.</text>
     
-    <!-- Point 3 -->
-    <text x="0" y="52" class="mono-text" fill="#00FFCC">&gt;</text>
-    <text x="15" y="52" class="mono-text bullet-point">Implemented secure authentication gates, form controls, and validation protocols.</text>
+    <text x="0" y="58" class="mono-text" fill="#00FFCC">&gt;</text>
+    <text x="15" y="58" class="mono-text bullet-point">Implemented secure auth verification controls and robust input validation forms.</text>
   </g>
 
-  <!-- Visual Widget Panel (Right) - Web Layout Schematic Mockup -->
+  <!-- Visual Widget Panel (Right) -->
   <g transform="translate(670, 30)">
-    <rect width="130" height="120" fill="#0f131c" stroke="#00FFCC" stroke-width="1.5" stroke-opacity="0.2" rx="4" />
-    <text x="65" y="18" text-anchor="middle" class="tag-text" fill="#5a6b82" font-size="9">UI_MODULE_MOCKUP</text>
+    <rect width="130" height="120" fill="#0c0e15" stroke="#00FFCC" stroke-width="1.2" stroke-opacity="0.2" rx="4" />
+    <text x="65" y="18" text-anchor="middle" class="tag-text" fill="#627289" font-size="9">UI_MODULE_MOCKUP</text>
     
     <!-- Outer screen border -->
-    <rect x="12" y="27" width="106" height="70" fill="none" stroke="#5a6b82" stroke-opacity="0.3" rx="2" />
+    <rect x="12" y="27" width="106" height="70" fill="none" stroke="#627289" stroke-opacity="0.3" rx="2" />
     
     <!-- Top Nav bar in mockup -->
     <rect x="12" y="27" width="106" height="8" fill="#141a24" />
     <circle cx="18" cy="31" r="1.5" fill="#FF3366" />
     <circle cx="22" cy="31" r="1.5" fill="#00FFCC" />
-    <rect x="80" y="29" width="30" height="4" fill="#5a6b82" opacity="0.3" />
+    <rect x="80" y="29" width="30" height="4" fill="#627289" opacity="0.3" rx="1"/>
 
     <!-- Side Panel -->
     <rect x="12" y="35" width="22" height="62" fill="#111621" opacity="0.5" />
     <rect x="15" y="42" width="16" height="3" fill="#00FFCC" opacity="0.4" />
-    <rect x="15" y="50" width="16" height="3" fill="#5a6b82" opacity="0.4" />
-    <rect x="15" y="58" width="16" height="3" fill="#5a6b82" opacity="0.4" />
+    <rect x="15" y="50" width="16" height="3" fill="#627289" opacity="0.4" />
+    <rect x="15" y="58" width="16" height="3" fill="#627289" opacity="0.4" />
 
     <!-- Grid Items inside mockup -->
-    <!-- Grid Item 1 (Graph Box) -->
     <rect x="38" y="39" width="46" height="24" fill="#141a24" stroke="#00FFCC" stroke-width="0.5" stroke-opacity="0.6" rx="1" />
-    <!-- Graph Line in mockup -->
     <path d="M 40 55 Q 50 43, 60 50 T 80 44" fill="none" stroke="#00FFCC" stroke-width="0.8" />
     
-    <!-- Grid Item 2 (Data Block) -->
     <rect x="88" y="39" width="24" height="24" fill="#141a24" stroke="#8A2BE2" stroke-width="0.5" stroke-opacity="0.6" rx="1" />
     <circle cx="100" cy="51" r="4" fill="none" stroke="#8A2BE2" stroke-width="1" />
     
-    <!-- Grid Item 3 (Bottom Table) -->
-    <rect x="38" y="67" width="74" height="26" fill="#141a24" stroke="#5a6b82" stroke-opacity="0.3" rx="1" />
-    <line x1="38" y1="73" x2="112" y2="73" stroke="#5a6b82" stroke-opacity="0.3" stroke-width="0.5" />
-    <line x1="38" y1="80" x2="112" y2="80" stroke="#5a6b82" stroke-opacity="0.3" stroke-width="0.5" />
+    <!-- Table -->
+    <rect x="38" y="67" width="74" height="26" fill="#141a24" stroke="#627289" stroke-opacity="0.3" rx="1" />
+    <line x1="38" y1="73" x2="112" y2="73" stroke="#627289" stroke-opacity="0.3" stroke-width="0.5" />
+    <line x1="38" y1="80" x2="112" y2="80" stroke="#627289" stroke-opacity="0.3" stroke-width="0.5" />
     <rect x="42" y="70" width="20" height="2" fill="#00FFCC" opacity="0.5" />
-    <rect x="42" y="76" width="30" height="2" fill="#5a6b82" opacity="0.5" />
-    <rect x="42" y="83" width="15" height="2" fill="#5a6b82" opacity="0.5" />
+    <rect x="42" y="76" width="30" height="2" fill="#627289" opacity="0.5" />
+    <rect x="42" y="83" width="15" height="2" fill="#627289" opacity="0.5" />
 
     <!-- Bottom label -->
     <text x="65" y="115" text-anchor="middle" class="tag-text" font-size="8" fill="#00FFCC">RESPONSIVENESS: +30%</text>

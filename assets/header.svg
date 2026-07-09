@@ -2,12 +2,12 @@
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#07090e" />
-      <stop offset="50%" stop-color="#0c0f17" />
-      <stop offset="100%" stop-color="#05070a" />
+      <stop offset="0%" stop-color="#080a10" />
+      <stop offset="50%" stop-color="#0c0e17" />
+      <stop offset="100%" stop-color="#06070a" />
     </linearGradient>
     
-    <!-- Neon Teal Glow -->
+    <!-- Neon Glow Filters -->
     <filter id="tealGlow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="6" result="blur" />
       <feMerge>
@@ -16,10 +16,9 @@
       </feMerge>
     </filter>
 
-    <!-- Glowing Lines -->
     <filter id="lineGlow" x="-10%" y="-10%" width="120%" height="120%">
       <feGaussianBlur stdDeviation="3" result="blur" />
-      <feColorMatrix type="matrix" values="0 0 0 0 0.0   0 0 0 0 1.0   0 0 0 0 0.8   0 0 0 0 0.5 0" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.0   0 0 0 0 1.0   0 0 0 0 0.8   0 0 0 0 0.4 0" />
       <feMerge>
         <feMergeNode in="blur" />
         <feMergeNode in="SourceGraphic" />
@@ -28,31 +27,29 @@
 
     <!-- Grid Pattern -->
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00FFCC" stroke-width="0.5" stroke-opacity="0.07" />
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00FFCC" stroke-width="0.5" stroke-opacity="0.06" />
     </pattern>
   </defs>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&amp;family=Share+Tech+Mono&amp;display=swap');
-    
     .orbitron-title {
-      font-family: 'Orbitron', 'Courier New', monospace;
-      font-weight: 900;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
       fill: #ffffff;
-      font-size: 42px;
-      letter-spacing: 6px;
+      font-size: 38px;
+      letter-spacing: 5px;
       filter: url(#tealGlow);
     }
     
     .mono-text {
-      font-family: 'Share Tech Mono', monospace;
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
       fill: #00FFCC;
-      font-size: 14px;
-      letter-spacing: 1px;
+      font-size: 13.5px;
+      letter-spacing: 0.5px;
     }
 
     .dim-text {
-      fill: #5a6b82;
+      fill: #627289;
     }
 
     /* Keyframe Animations */
@@ -72,7 +69,7 @@
     }
 
     .cursor {
-      animation: blink 1s infinite;
+      animation: blink 1.2s infinite;
     }
 
     .pulser {
@@ -80,7 +77,7 @@
     }
 
     .scan {
-      animation: scanline 6s infinite linear;
+      animation: scanline 7s infinite linear;
     }
   </style>
 
@@ -91,65 +88,60 @@
   <rect width="840" height="260" fill="url(#grid)" rx="8" />
 
   <!-- Animated Scanline -->
-  <rect width="840" height="2" fill="#00FFCC" opacity="0.1" class="scan" />
+  <rect width="840" height="2" fill="#00FFCC" opacity="0.08" class="scan" />
 
   <!-- Outer HUD Borders -->
-  <rect x="15" y="15" width="810" height="230" fill="none" stroke="#00FFCC" stroke-width="1.5" stroke-opacity="0.2" rx="4" />
+  <rect x="15" y="15" width="810" height="230" fill="none" stroke="#00FFCC" stroke-width="1.5" stroke-opacity="0.18" rx="4" />
   
   <!-- Tech Corners -->
-  <!-- Top Left -->
-  <path d="M 12 35 L 12 12 L 35 12" fill="none" stroke="#00FFCC" stroke-width="3" filter="url(#lineGlow)" />
-  <!-- Top Right -->
-  <path d="M 828 35 L 828 12 L 805 12" fill="none" stroke="#00FFCC" stroke-width="3" filter="url(#lineGlow)" />
-  <!-- Bottom Left -->
-  <path d="M 12 225 L 12 248 L 35 248" fill="none" stroke="#00FFCC" stroke-width="3" filter="url(#lineGlow)" />
-  <!-- Bottom Right -->
-  <path d="M 828 225 L 828 248 L 805 248" fill="none" stroke="#00FFCC" stroke-width="3" filter="url(#lineGlow)" />
+  <path d="M 12 35 L 12 12 L 35 12" fill="none" stroke="#00FFCC" stroke-width="2.5" filter="url(#lineGlow)" />
+  <path d="M 828 35 L 828 12 L 805 12" fill="none" stroke="#00FFCC" stroke-width="2.5" filter="url(#lineGlow)" />
+  <path d="M 12 225 L 12 248 L 35 248" fill="none" stroke="#00FFCC" stroke-width="2.5" filter="url(#lineGlow)" />
+  <path d="M 828 225 L 828 248 L 805 248" fill="none" stroke="#00FFCC" stroke-width="2.5" filter="url(#lineGlow)" />
 
   <!-- Decorative HUD elements -->
   <circle cx="25" cy="25" r="3" fill="#00FFCC" class="pulser" />
   <circle cx="815" cy="25" r="3" fill="#00FFCC" class="pulser" />
-  <line x1="50" y1="20" x2="150" y2="20" stroke="#00FFCC" stroke-width="1" stroke-dasharray="5, 3" stroke-opacity="0.3" />
-  <line x1="690" y1="20" x2="790" y2="20" stroke="#00FFCC" stroke-width="1" stroke-dasharray="5, 3" stroke-opacity="0.3" />
+  <line x1="50" y1="20" x2="150" y2="20" stroke="#00FFCC" stroke-width="1" stroke-dasharray="4, 4" stroke-opacity="0.2" />
+  <line x1="690" y1="20" x2="790" y2="20" stroke="#00FFCC" stroke-width="1" stroke-dasharray="4, 4" stroke-opacity="0.2" />
 
   <!-- Main Name Title -->
-  <text x="50" y="85" class="orbitron-title">VIGNESH G A</text>
+  <text x="50" y="80" class="orbitron-title">VIGNESH G A</text>
   
-  <!-- Rotating / Oscillating Core Graph (Visual AI touch) -->
+  <!-- Rotating Tech Dials HUD (Right) -->
   <g transform="translate(680, 130)">
-    <!-- Tech Circle HUD -->
     <circle cx="0" cy="0" r="55" fill="none" stroke="#00FFCC" stroke-width="1.5" stroke-opacity="0.1" />
-    <circle cx="0" cy="0" r="45" fill="none" stroke="#00FFCC" stroke-width="2" stroke-dasharray="10, 40" stroke-opacity="0.6">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+    <circle cx="0" cy="0" r="45" fill="none" stroke="#00FFCC" stroke-width="2" stroke-dasharray="12, 36" stroke-opacity="0.5">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="18s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="0" cy="0" r="35" fill="none" stroke="#8A2BE2" stroke-width="1.5" stroke-dasharray="150, 40" stroke-opacity="0.7">
-      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="10s" repeatCount="indefinite"/>
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#8A2BE2" stroke-width="1.5" stroke-dasharray="140, 45" stroke-opacity="0.6">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="9s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="0" cy="0" r="25" fill="none" stroke="#00FFCC" stroke-width="1" stroke-dasharray="2, 8" stroke-opacity="0.5" />
-    <!-- Pulse Core -->
-    <circle cx="0" cy="0" r="10" fill="#00FFCC" fill-opacity="0.2" filter="url(#tealGlow)">
-      <animate attributeName="r" values="8;12;8" dur="2.5s" repeatCount="indefinite" />
+    <circle cx="0" cy="0" r="25" fill="none" stroke="#00FFCC" stroke-width="1" stroke-dasharray="3, 8" stroke-opacity="0.4" />
+    <!-- Core pulse -->
+    <circle cx="0" cy="0" r="10" fill="#00FFCC" fill-opacity="0.15" filter="url(#tealGlow)">
+      <animate attributeName="r" values="7;11;7" dur="3s" repeatCount="indefinite" />
     </circle>
     <!-- Crosshairs -->
-    <line x1="-65" y1="0" x2="-50" y2="0" stroke="#00FFCC" stroke-opacity="0.4" />
-    <line x1="50" y1="0" x2="65" y2="0" stroke="#00FFCC" stroke-opacity="0.4" />
-    <line x1="0" y1="-65" x2="0" y2="-50" stroke="#00FFCC" stroke-opacity="0.4" />
-    <line x1="0" y1="50" x2="0" y2="65" stroke="#00FFCC" stroke-opacity="0.4" />
+    <line x1="-65" y1="0" x2="-50" y2="0" stroke="#00FFCC" stroke-opacity="0.3" />
+    <line x1="50" y1="0" x2="65" y2="0" stroke="#00FFCC" stroke-opacity="0.3" />
+    <line x1="0" y1="-65" x2="0" y2="-50" stroke="#00FFCC" stroke-opacity="0.3" />
+    <line x1="0" y1="50" x2="0" y2="65" stroke="#00FFCC" stroke-opacity="0.3" />
   </g>
 
-  <!-- Left Stats Console Panel -->
+  <!-- Spaced Console Details (Left) -->
   <g transform="translate(50, 115)">
-    <!-- Diagnostic Lines -->
-    <text x="0" y="0" class="mono-text dim-text">[SYS_INITIALIZING] .................... [OK]</text>
-    <text x="0" y="22" class="mono-text">> PRIMARY_CORE: <tspan fill="#ffffff" font-weight="bold">AGENTIC AI ARCHITECT</tspan></text>
-    <text x="0" y="44" class="mono-text">> AI_SYNCHRONIZATION: <tspan fill="#8A2BE2">ACTIVE (100%)</tspan></text>
-    <text x="0" y="66" class="mono-text">> NEURAL_MODEL: <tspan fill="#ffffff">LLM Orchestration &amp; RUL Predictors</tspan></text>
-    <text x="0" y="88" class="mono-text">> VECTOR_PATH: <tspan fill="#00FFCC">VIT-AP (CSE) x IIT Ropar (AI)</tspan> <tspan class="cursor" fill="#00FFCC">█</tspan></text>
+    <!-- Spaced text layout with 26px Y-increment to completely prevent text overlaps -->
+    <text x="0" y="0" class="mono-text dim-text">[SYS_INITIALIZING] ................................ [OK]</text>
+    <text x="0" y="26" class="mono-text">> PRIMARY_CORE: <tspan fill="#ffffff" font-weight="bold">AGENTIC AI ARCHITECT</tspan></text>
+    <text x="0" y="52" class="mono-text">> AI_SYNCHRONIZATION: <tspan fill="#8A2BE2" font-weight="bold">ACTIVE (100%)</tspan></text>
+    <text x="0" y="78" class="mono-text">> NEURAL_MODEL: <tspan fill="#ffffff">LLM Orchestration &amp; RUL Predictors</tspan></text>
+    <text x="0" y="104" class="mono-text">> VECTOR_PATH: <tspan fill="#00FFCC">VIT-AP (CSE) x IIT Ropar (AI)</tspan> <tspan class="cursor" fill="#00FFCC">█</tspan></text>
   </g>
 
-  <!-- Small tech spec tags -->
-  <text x="50" y="235" class="mono-text dim-text" font-size="10">COGNITION: MULTI-AGENT</text>
-  <text x="210" y="235" class="mono-text dim-text" font-size="10">INTERPRETABLE: SHAP/IG</text>
-  <text x="370" y="235" class="mono-text dim-text" font-size="10">MATRIX: REACT.JS/PYTHON</text>
-  <text x="700" y="235" class="mono-text dim-text" font-size="10" font-weight="bold" fill="#00FFCC">v2.0.4-LNK</text>
+  <!-- Tech tags -->
+  <text x="50" y="235" class="mono-text dim-text" font-size="10.5">COGNITION: MULTI-AGENT</text>
+  <text x="230" y="235" class="mono-text dim-text" font-size="10.5">INTERPRETABLE: SHAP/IG</text>
+  <text x="410" y="235" class="mono-text dim-text" font-size="10.5">MATRIX: REACT.JS/PYTHON</text>
+  <text x="705" y="235" class="mono-text dim-text" font-size="10.5" font-weight="bold" fill="#00FFCC">v2.1.0-LNK</text>
 </svg>

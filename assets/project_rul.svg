@@ -1,19 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 840 180" fill="none">
   <defs>
+    <!-- Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#07090e" />
-      <stop offset="100%" stop-color="#0a0c12" />
+      <stop offset="0%" stop-color="#080a10" />
+      <stop offset="100%" stop-color="#0a0c14" />
     </linearGradient>
+    
+    <!-- Grid Pattern -->
     <pattern id="grid" width="15" height="15" patternUnits="userSpaceOnUse">
       <path d="M 15 0 L 0 0 0 15" fill="none" stroke="#00FFCC" stroke-width="0.5" stroke-opacity="0.04" />
     </pattern>
-    <filter id="tealGlow" x="-10%" y="-10%" width="120%" height="120%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
+    
+    <!-- Glow Filters -->
     <filter id="purpleGlow" x="-10%" y="-10%" width="120%" height="120%">
       <feGaussianBlur stdDeviation="3" result="blur" />
       <feMerge>
@@ -24,29 +22,27 @@
   </defs>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&amp;family=Share+Tech+Mono&amp;display=swap');
-    
     .mono-text {
-      font-family: 'Share Tech Mono', monospace;
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
       fill: #ffffff;
-      font-size: 12px;
+      font-size: 11.5px;
       letter-spacing: 0.5px;
     }
     
     .hud-header {
-      font-family: 'Orbitron', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       font-weight: 700;
       fill: #8A2BE2;
-      font-size: 11px;
+      font-size: 10.5px;
       letter-spacing: 2px;
     }
 
     .proj-title {
-      font-family: 'Orbitron', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       font-weight: 700;
       fill: #ffffff;
-      font-size: 16px;
-      letter-spacing: 1px;
+      font-size: 15.5px;
+      letter-spacing: 0.5px;
     }
 
     .tag-bg {
@@ -56,23 +52,14 @@
     }
 
     .tag-text {
-      font-family: 'Share Tech Mono', monospace;
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;
       fill: #8A2BE2;
-      font-size: 10px;
+      font-size: 9.5px;
     }
 
     .bullet-point {
       fill: #a0aec0;
       font-size: 11.5px;
-    }
-
-    .pulse {
-      animation: blink 2.5s infinite;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 0.9; }
-      50% { opacity: 0.3; }
     }
   </style>
 
@@ -81,67 +68,63 @@
   <rect width="840" height="180" fill="url(#grid)" rx="8" />
   
   <!-- Outer Border with Glowing Accent Corner -->
-  <rect x="10" y="10" width="820" height="160" fill="none" stroke="#8A2BE2" stroke-width="1" stroke-opacity="0.15" rx="6" />
+  <rect x="10" y="10" width="820" height="160" fill="none" stroke="#8A2BE2" stroke-width="1.2" stroke-opacity="0.15" rx="6" />
   <path d="M 10 35 L 10 10 L 35 10" fill="none" stroke="#8A2BE2" stroke-width="2" filter="url(#purpleGlow)" />
 
   <!-- Code/Module ID Tag -->
-  <text x="30" y="28" class="hud-header">[ MODULE_02: EXPLAINABLE_RUL_MODEL ]</text>
-  <circle cx="310" cy="24" r="3" fill="#8A2BE2" class="pulse" />
+  <text x="30" y="28" class="hud-header">[ CORE_MODULE_02: EXPLAINABLE_RUL_PRED ]</text>
 
   <!-- Project Title -->
-  <text x="30" y="52" class="proj-title">Explainable Aero-Engine Remaining Useful Life Prediction</text>
+  <text x="30" y="52" class="proj-title">Explainable RUL Prediction (Unlocking the Black Box)</text>
 
   <!-- Technology Badges -->
   <g transform="translate(30, 62)">
-    <rect x="0" y="0" width="60" height="18" class="tag-bg" rx="3" />
-    <text x="30" y="12" text-anchor="middle" class="tag-text">PYTHON</text>
+    <rect x="0" y="0" width="65" height="18" class="tag-bg" rx="3" />
+    <text x="32.5" y="12" text-anchor="middle" class="tag-text">PYTHON</text>
 
-    <rect x="65" y="0" width="90" height="18" class="tag-bg" rx="3" />
-    <text x="110" y="12" text-anchor="middle" class="tag-text">TENSORFLOW</text>
+    <rect x="70" y="0" width="95" height="18" class="tag-bg" rx="3" />
+    <text x="117.5" y="12" text-anchor="middle" class="tag-text">TENSORFLOW</text>
 
-    <rect x="160" y="0" width="95" height="18" class="tag-bg" rx="3" />
-    <text x="207.5" y="12" text-anchor="middle" class="tag-text">TRANSFORMERS</text>
+    <rect x="170" y="0" width="95" height="18" class="tag-bg" rx="3" />
+    <text x="217.5" y="12" text-anchor="middle" class="tag-text">TRANSFORMERS</text>
 
-    <rect x="260" y="0" width="45" height="18" class="tag-bg" rx="3" />
-    <text x="282.5" y="12" text-anchor="middle" class="tag-text">SHAP</text>
+    <rect x="270" y="0" width="45" height="18" class="tag-bg" rx="3" />
+    <text x="292.5" y="12" text-anchor="middle" class="tag-text">SHAP</text>
   </g>
 
-  <!-- Summary Bullets -->
-  <g transform="translate(30, 95)">
-    <!-- Point 1 -->
+  <!-- Spaced Bullet Points -->
+  <g transform="translate(30, 96)">
     <text x="0" y="12" class="mono-text" fill="#8A2BE2">&gt;</text>
-    <text x="15" y="12" class="mono-text bullet-point">Trained a hybrid <tspan fill="#ffffff" font-weight="bold">CNN–Transformer–BiLSTM</tspan> network on C-MAPSS engine telemetry.</text>
+    <text x="15" y="12" class="mono-text bullet-point">Trained a hybrid <tspan fill="#ffffff" font-weight="bold">CNN–Transformer–BiLSTM</tspan> network for aero-engine RUL prediction.</text>
     
-    <!-- Point 2 -->
-    <text x="0" y="32" class="mono-text" fill="#8A2BE2">&gt;</text>
-    <text x="15" y="32" class="mono-text bullet-point">Achieved key error metrics: <tspan fill="#8A2BE2" font-weight="bold">RMSE: 14.60</tspan>, <tspan fill="#8A2BE2" font-weight="bold">MAE: 12.09</tspan>, <tspan fill="#8A2BE2" font-weight="bold">R2: 0.848</tspan> (+15% vs baselines).</text>
+    <text x="0" y="35" class="mono-text" fill="#8A2BE2">&gt;</text>
+    <text x="15" y="35" class="mono-text bullet-point">Achieved key performance indicators: <tspan fill="#8A2BE2" font-weight="bold">RMSE: 14.60</tspan>, <tspan fill="#8A2BE2" font-weight="bold">R2: 0.848</tspan> (outperforming baseline by 15%).</text>
     
-    <!-- Point 3 -->
-    <text x="0" y="52" class="mono-text" fill="#8A2BE2">&gt;</text>
-    <text x="15" y="52" class="mono-text bullet-point">Applied <tspan fill="#ffffff" font-weight="bold">SHAP &amp; Integrated Gradients</tspan> to extract features, explaining prediction trust maps.</text>
+    <text x="0" y="58" class="mono-text" fill="#8A2BE2">&gt;</text>
+    <text x="15" y="58" class="mono-text bullet-point">Applied <tspan fill="#ffffff" font-weight="bold">SHAP &amp; Integrated Gradients</tspan> to extract features and explain predictions.</text>
   </g>
 
-  <!-- Visual Widget Panel (Right) - Engine Degradation Curve graph -->
+  <!-- Visual Widget Panel (Right) -->
   <g transform="translate(670, 30)">
-    <rect width="130" height="120" fill="#0f131c" stroke="#8A2BE2" stroke-width="1.5" stroke-opacity="0.2" rx="4" />
-    <text x="65" y="18" text-anchor="middle" class="tag-text" fill="#5a6b82" font-size="9">RUL_DEGRADATION_VECTOR</text>
+    <rect width="130" height="120" fill="#0c0e15" stroke="#8A2BE2" stroke-width="1.2" stroke-opacity="0.2" rx="4" />
+    <text x="65" y="18" text-anchor="middle" class="tag-text" fill="#627289" font-size="9">RUL_DEGRADATION</text>
     
     <!-- Graph Grid Lines -->
     <line x1="20" y1="95" x2="115" y2="95" stroke="#1c2535" stroke-dasharray="2, 2" />
     <line x1="20" y1="65" x2="115" y2="65" stroke="#1c2535" stroke-dasharray="2, 2" />
     <line x1="20" y1="35" x2="115" y2="35" stroke="#1c2535" stroke-dasharray="2, 2" />
-    <line x1="20" y1="30" x2="20" y2="105" stroke="#5a6b82" stroke-width="1" stroke-opacity="0.4" />
-    <line x1="20" y1="105" x2="115" y2="105" stroke="#5a6b82" stroke-width="1" stroke-opacity="0.4" />
+    <line x1="20" y1="30" x2="20" y2="105" stroke="#627289" stroke-width="1" stroke-opacity="0.3" />
+    <line x1="20" y1="105" x2="115" y2="105" stroke="#627289" stroke-width="1" stroke-opacity="0.3" />
     
-    <!-- Real Sensor Plot Dots (Scattered) -->
-    <circle cx="35" cy="40" r="1.5" fill="#5a6b82" opacity="0.6" />
-    <circle cx="45" cy="48" r="1.5" fill="#5a6b82" opacity="0.6" />
-    <circle cx="55" cy="42" r="1.5" fill="#5a6b82" opacity="0.6" />
-    <circle cx="65" cy="58" r="1.5" fill="#5a6b82" opacity="0.6" />
-    <circle cx="75" cy="68" r="1.5" fill="#5a6b82" opacity="0.6" />
-    <circle cx="85" cy="85" r="1.5" fill="#5a6b82" opacity="0.6" />
-    <circle cx="95" cy="80" r="1.5" fill="#5a6b82" opacity="0.6" />
-    <circle cx="105" cy="98" r="1.5" fill="#5a6b82" opacity="0.6" />
+    <!-- Scatter points -->
+    <circle cx="35" cy="42" r="1.5" fill="#627289" opacity="0.6" />
+    <circle cx="45" cy="49" r="1.5" fill="#627289" opacity="0.6" />
+    <circle cx="55" cy="44" r="1.5" fill="#627289" opacity="0.6" />
+    <circle cx="65" cy="60" r="1.5" fill="#627289" opacity="0.6" />
+    <circle cx="75" cy="70" r="1.5" fill="#627289" opacity="0.6" />
+    <circle cx="85" cy="84" r="1.5" fill="#627289" opacity="0.6" />
+    <circle cx="95" cy="80" r="1.5" fill="#627289" opacity="0.6" />
+    <circle cx="105" cy="98" r="1.5" fill="#627289" opacity="0.6" />
 
     <!-- Predicted RUL Curve -->
     <path d="M 20 35 Q 60 45, 80 70 T 115 102" fill="none" stroke="#8A2BE2" stroke-width="2" filter="url(#purpleGlow)" />
