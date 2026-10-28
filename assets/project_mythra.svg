@@ -1,141 +1,117 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 840 180" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="190" viewBox="0 0 840 190" fill="none">
   <defs>
-    <!-- Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080a10" />
-      <stop offset="100%" stop-color="#0a0c14" />
+      <stop offset="0%" stop-color="#f8fbff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
     </linearGradient>
-    
-    <!-- Grid Pattern -->
-    <pattern id="grid" width="15" height="15" patternUnits="userSpaceOnUse">
-      <path d="M 15 0 L 0 0 0 15" fill="none" stroke="#00FFCC" stroke-width="0.5" stroke-opacity="0.04" />
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0284c7" stroke-width="0.5" stroke-opacity="0.06" />
     </pattern>
-    
-    <!-- Glow Filters -->
-    <filter id="magentaGlow" x="-10%" y="-10%" width="120%" height="120%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feColorMatrix type="matrix" values="0 0 0 0 0.88   0 0 0 0 0.0   0 0 0 0 1.0   0 0 0 0 0.4 0" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
   </defs>
 
   <style>
-    .mono-text {
-      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      fill: #ffffff;
-      font-size: 11.5px;
-      letter-spacing: 0.5px;
-    }
-    
     .hud-header {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       font-weight: 700;
-      fill: #e200ff;
-      font-size: 10.5px;
-      letter-spacing: 2px;
+      fill: #0284c7;
+      font-size: 11px;
+      letter-spacing: 1.5px;
     }
-
     .proj-title {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      font-weight: 700;
-      fill: #ffffff;
-      font-size: 15.5px;
-      letter-spacing: 0.5px;
+      font-weight: 800;
+      fill: #0f172a;
+      font-size: 16px;
     }
-
     .tag-bg {
-      fill: #121926;
-      stroke: #e200ff;
-      stroke-opacity: 0.3;
+      fill: #e0f2fe;
+      stroke: #7dd3fc;
+      stroke-width: 1;
     }
-
     .tag-text {
-      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;
-      fill: #e200ff;
-      font-size: 9.5px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 700;
+      fill: #0369a1;
+      font-size: 10px;
     }
-
-    .bullet-point {
-      fill: #a0aec0;
-      font-size: 11.5px;
+    .bullet-icon {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 700;
+      fill: #0284c7;
+      font-size: 12px;
+    }
+    .bullet-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 500;
+      fill: #334155;
+      font-size: 12.5px;
     }
   </style>
 
-  <!-- Background Base -->
-  <rect width="840" height="180" fill="url(#bgGrad)" rx="8" />
-  <rect width="840" height="180" fill="url(#grid)" rx="8" />
-  
-  <!-- Outer Border with Glowing Accent Corner -->
-  <rect x="10" y="10" width="820" height="160" fill="none" stroke="#e200ff" stroke-width="1.2" stroke-opacity="0.15" rx="6" />
-  <path d="M 10 35 L 10 10 L 35 10" fill="none" stroke="#e200ff" stroke-width="2" filter="url(#magentaGlow)" />
+  <!-- Card Background -->
+  <rect width="840" height="190" rx="14" fill="url(#bgGrad)" stroke="#bae6fd" stroke-width="1.5" />
+  <rect width="840" height="190" rx="14" fill="url(#grid)" />
 
-  <!-- Code/Module ID Tag -->
-  <text x="30" y="28" class="hud-header">[ CORE_MODULE_03: MYTHRA_ORCHESTRATOR ]</text>
+  <!-- Left Accent Bar -->
+  <rect x="0" y="24" width="5" height="142" rx="2.5" fill="url(#blueGrad)" />
 
-  <!-- Project Title -->
-  <text x="30" y="52" class="proj-title">MYTHRA – Multimodal Storyteller Orchestrator</text>
+  <!-- Header & Title -->
+  <text x="28" y="32" class="hud-header">[ MODULE_03 // MYTHRA_MULTIMODAL_AI ]</text>
+  <text x="28" y="56" class="proj-title">MYTHRA – Multimodal Storyteller Orchestration Engine</text>
 
-  <!-- Technology Badges -->
-  <g transform="translate(30, 62)">
-    <rect x="0" y="0" width="65" height="18" class="tag-bg" rx="3" />
-    <text x="32.5" y="12" text-anchor="middle" class="tag-text">PYTHON</text>
+  <!-- Tech Stack Pills -->
+  <g transform="translate(28, 68)">
+    <rect x="0" y="0" width="66" height="20" rx="5" class="tag-bg" />
+    <text x="33" y="13.5" text-anchor="middle" class="tag-text">PYTHON</text>
 
-    <rect x="70" y="0" width="60" height="18" class="tag-bg" rx="3" />
-    <text x="100" y="12" text-anchor="middle" class="tag-text">REACT.JS</text>
+    <rect x="74" y="0" width="72" height="20" rx="5" class="tag-bg" />
+    <text x="110" y="13.5" text-anchor="middle" class="tag-text">REACT.JS</text>
 
-    <rect x="135" y="0" width="95" height="18" class="tag-bg" rx="3" />
-    <text x="182.5" y="12" text-anchor="middle" class="tag-text">LLM_INTEGRATION</text>
+    <rect x="154" y="0" width="84" height="20" rx="5" class="tag-bg" />
+    <text x="196" y="13.5" text-anchor="middle" class="tag-text">REST_APIs</text>
 
-    <rect x="235" y="0" width="95" height="18" class="tag-bg" rx="3" />
-    <text x="282.5" y="12" text-anchor="middle" class="tag-text">DIFFUSION_TTS</text>
+    <rect x="246" y="0" width="116" height="20" rx="5" class="tag-bg" />
+    <text x="304" y="13.5" text-anchor="middle" class="tag-text">LLM_DIFFUSION_TTS</text>
   </g>
 
-  <!-- Spaced Bullet Points -->
-  <g transform="translate(30, 96)">
-    <text x="0" y="12" class="mono-text" fill="#e200ff">&gt;</text>
-    <text x="15" y="12" class="mono-text bullet-point">Built end-to-end pipeline integrating <tspan fill="#ffffff" font-weight="bold">3 AI models (LLMs, Diffusion, TTS)</tspan> via REST APIs.</text>
-    
-    <text x="0" y="35" class="mono-text" fill="#e200ff">&gt;</text>
-    <text x="15" y="35" class="mono-text bullet-point">Optimized asynchronous processing queues, decreasing overall latency by <tspan fill="#e200ff" font-weight="bold">45%</tspan>.</text>
-    
-    <text x="0" y="58" class="mono-text" fill="#e200ff">&gt;</text>
-    <text x="15" y="58" class="mono-text bullet-point">Developed an interactive UI handling <tspan fill="#ffffff" font-weight="bold">5 concurrent streams</tspan> with live system feedback logs.</text>
+  <!-- Bullet Points -->
+  <g transform="translate(28, 108)">
+    <text x="0" y="12" class="bullet-icon">&#9656;</text>
+    <text x="16" y="12" class="bullet-text">Integrated 3 distinct AI models (LLMs, Text-to-Image, Neural TTS) into a unified REST pipeline.</text>
+
+    <text x="0" y="38" class="bullet-icon">&#9656;</text>
+    <text x="16" y="38" class="bullet-text">Optimized async orchestration, cutting latency by 45% to generate 10-14 scenes in 30-40s.</text>
+
+    <text x="0" y="64" class="bullet-icon">&#9656;</text>
+    <text x="16" y="64" class="bullet-text">Engineered a responsive React interface managing 5 concurrent real-time service streams.</text>
   </g>
 
-  <!-- Visual Widget Panel (Right) -->
-  <g transform="translate(670, 30)">
-    <rect width="130" height="120" fill="#0c0e15" stroke="#e200ff" stroke-width="1.2" stroke-opacity="0.2" rx="4" />
-    <text x="65" y="18" text-anchor="middle" class="tag-text" fill="#627289" font-size="9">PIPELINE_FLOW</text>
-    
-    <!-- Box: Prompt Input -->
-    <rect x="15" y="32" width="100" height="14" fill="#141a24" stroke="#627289" stroke-opacity="0.4" rx="2" />
-    <text x="65" y="42" text-anchor="middle" class="mono-text" font-size="8" fill="#a0aec0">INPUT_PROMPT</text>
+  <!-- Right Telemetry Widget (Multimodal Flow Diagram) -->
+  <g transform="translate(654, 22)">
+    <rect width="162" height="146" rx="10" fill="#ffffff" fill-opacity="0.92" stroke="#7dd3fc" stroke-width="1.2" />
+    <text x="81" y="22" text-anchor="middle" class="tag-text" fill="#0284c7">ASYNC_ORCHESTRATOR</text>
+    <line x1="16" y1="30" x2="146" y2="30" stroke="#e0f2fe" stroke-width="1.5" />
 
-    <!-- Arrow -->
-    <path d="M 65 46 L 65 54" stroke="#e200ff" stroke-width="1" />
-    
-    <!-- Box: LLM Core -->
-    <rect x="15" y="54" width="100" height="16" fill="#1b172a" stroke="#e200ff" stroke-width="1" rx="2" filter="url(#magentaGlow)" />
-    <text x="65" y="65" text-anchor="middle" class="mono-text" font-size="9" fill="#ffffff" font-weight="bold">COGNITIVE_LLM</text>
+    <!-- Top Node: LLM -->
+    <rect x="31" y="40" width="100" height="20" rx="4" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.2" />
+    <text x="81" y="53.5" text-anchor="middle" class="tag-text" font-size="9">LLM_STORY_CORE</text>
 
-    <!-- Arrows splitting -->
-    <path d="M 40 70 L 40 84 M 90 70 L 90 84 M 40 76 L 90 76" stroke="#e200ff" stroke-width="1" />
+    <!-- Connector Lines -->
+    <path d="M 81 60 L 81 68 M 46 68 L 116 68 M 46 68 L 46 76 M 116 68 L 116 76" stroke="#0284c7" stroke-width="1.2" />
 
-    <!-- Box: Diffusion -->
-    <rect x="10" y="84" width="52" height="15" fill="#141a24" stroke="#00FFCC" stroke-opacity="0.4" rx="2" />
-    <text x="36" y="94" text-anchor="middle" class="mono-text" font-size="7.5" fill="#00FFCC">DIFFUSION</text>
+    <!-- Split Nodes: Image & Audio -->
+    <rect x="16" y="76" width="60" height="22" rx="4" fill="#f0f9ff" stroke="#38bdf8" stroke-width="1.2" />
+    <text x="46" y="90" text-anchor="middle" class="tag-text" font-size="8.5">DIFFUSION</text>
 
-    <!-- Box: TTS -->
-    <rect x="68" y="84" width="52" height="15" fill="#141a24" stroke="#8A2BE2" stroke-opacity="0.4" rx="2" />
-    <text x="94" y="94" text-anchor="middle" class="mono-text" font-size="7.5" fill="#8A2BE2">NEURAL_TTS</text>
+    <rect x="86" y="76" width="60" height="22" rx="4" fill="#f0f9ff" stroke="#2563eb" stroke-width="1.2" />
+    <text x="116" y="90" text-anchor="middle" class="tag-text" font-size="8.5">NEURAL_TTS</text>
 
-    <!-- Output Box -->
-    <path d="M 36 99 L 36 108 M 94 99 L 94 108 M 36 104 L 94 104" stroke="#e200ff" stroke-width="1" />
-    <rect x="15" y="108" width="100" height="6" fill="#00FFCC" rx="3" opacity="0.8" />
-    
-    <text x="65" y="124" text-anchor="middle" class="tag-text" font-size="8" fill="#e200ff">LATENCY: ~35 SEC</text>
+    <!-- Bottom Metric Pill -->
+    <rect x="16" y="114" width="130" height="20" rx="5" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1" />
+    <text x="81" y="127.5" text-anchor="middle" class="tag-text" fill="#0369a1">LATENCY: -45% FAST</text>
   </g>
 </svg>

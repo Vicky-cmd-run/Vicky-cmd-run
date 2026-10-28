@@ -1,145 +1,119 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 840 180" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="190" viewBox="0 0 840 190" fill="none">
   <defs>
-    <!-- Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080a10" />
-      <stop offset="100%" stop-color="#0a0c14" />
+      <stop offset="0%" stop-color="#f8fbff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
     </linearGradient>
-    
-    <!-- Grid Pattern -->
-    <pattern id="grid" width="15" height="15" patternUnits="userSpaceOnUse">
-      <path d="M 15 0 L 0 0 0 15" fill="none" stroke="#00FFCC" stroke-width="0.5" stroke-opacity="0.04" />
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0284c7" stroke-width="0.5" stroke-opacity="0.06" />
     </pattern>
-    
-    <!-- Glow Filter -->
-    <filter id="tealGlow" x="-10%" y="-10%" width="120%" height="120%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
   </defs>
 
   <style>
-    .mono-text {
-      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      fill: #ffffff;
-      font-size: 11.5px;
-      letter-spacing: 0.5px;
-    }
-    
     .hud-header {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       font-weight: 700;
-      fill: #00FFCC;
-      font-size: 10.5px;
-      letter-spacing: 2px;
+      fill: #0284c7;
+      font-size: 11px;
+      letter-spacing: 1.5px;
     }
-
     .proj-title {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      font-weight: 700;
-      fill: #ffffff;
-      font-size: 15.5px;
-      letter-spacing: 0.5px;
+      font-weight: 800;
+      fill: #0f172a;
+      font-size: 16px;
     }
-
     .tag-bg {
-      fill: #121926;
-      stroke: #00FFCC;
-      stroke-opacity: 0.3;
+      fill: #e0f2fe;
+      stroke: #7dd3fc;
+      stroke-width: 1;
     }
-
     .tag-text {
-      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;
-      fill: #00FFCC;
-      font-size: 9.5px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 700;
+      fill: #0369a1;
+      font-size: 10px;
     }
-
-    .bullet-point {
-      fill: #a0aec0;
-      font-size: 11.5px;
+    .bullet-icon {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 700;
+      fill: #0284c7;
+      font-size: 12px;
+    }
+    .bullet-text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 500;
+      fill: #334155;
+      font-size: 12.5px;
     }
   </style>
 
-  <!-- Background Base -->
-  <rect width="840" height="180" fill="url(#bgGrad)" rx="8" />
-  <rect width="840" height="180" fill="url(#grid)" rx="8" />
-  
-  <!-- Outer Border with Glowing Accent Corner -->
-  <rect x="10" y="10" width="820" height="160" fill="none" stroke="#00FFCC" stroke-width="1.2" stroke-opacity="0.15" rx="6" />
-  <path d="M 10 35 L 10 10 L 35 10" fill="none" stroke="#00FFCC" stroke-width="2" filter="url(#tealGlow)" />
+  <!-- Card Background -->
+  <rect width="840" height="190" rx="14" fill="url(#bgGrad)" stroke="#bae6fd" stroke-width="1.5" />
+  <rect width="840" height="190" rx="14" fill="url(#grid)" />
 
-  <!-- Code/Module ID Tag -->
-  <text x="30" y="28" class="hud-header">[ CORE_MODULE_04: PROFESSIONAL_EXPERIENCE ]</text>
+  <!-- Left Accent Bar -->
+  <rect x="0" y="24" width="5" height="142" rx="2.5" fill="url(#blueGrad)" />
 
-  <!-- Project Title -->
-  <text x="30" y="52" class="proj-title">Taizo.in – Frontend Development Intern</text>
+  <!-- Header & Title -->
+  <text x="28" y="32" class="hud-header">[ MODULE_04 // PROFESSIONAL_EXPERIENCE | MAY – JUN 2025 ]</text>
+  <text x="28" y="56" class="proj-title">Taizo.in – Frontend Development Intern (Remote)</text>
 
-  <!-- Technology Badges -->
-  <g transform="translate(30, 62)">
-    <rect x="0" y="0" width="60" height="18" class="tag-bg" rx="3" />
-    <text x="30" y="12" text-anchor="middle" class="tag-text">REACT.JS</text>
+  <!-- Tech Stack Pills -->
+  <g transform="translate(28, 68)">
+    <rect x="0" y="0" width="72" height="20" rx="5" class="tag-bg" />
+    <text x="36" y="13.5" text-anchor="middle" class="tag-text">REACT.JS</text>
 
-    <rect x="65" y="0" width="80" height="18" class="tag-bg" rx="3" />
-    <text x="105" y="12" text-anchor="middle" class="tag-text">MATERIAL_UI</text>
+    <rect x="80" y="0" width="90" height="20" rx="5" class="tag-bg" />
+    <text x="125" y="13.5" text-anchor="middle" class="tag-text">MATERIAL_UI</text>
 
-    <rect x="150" y="0" width="95" height="18" class="tag-bg" rx="3" />
-    <text x="197.5" y="12" text-anchor="middle" class="tag-text">UX_OPTIMIZATION</text>
+    <rect x="178" y="0" width="110" height="20" rx="5" class="tag-bg" />
+    <text x="233" y="13.5" text-anchor="middle" class="tag-text">DATA_DASHBOARDS</text>
 
-    <rect x="250" y="0" width="105" height="18" class="tag-bg" rx="3" />
-    <text x="302.5" y="12" text-anchor="middle" class="tag-text">RESPONSIVE_GRID</text>
+    <rect x="296" y="0" width="96" height="20" rx="5" class="tag-bg" />
+    <text x="344" y="13.5" text-anchor="middle" class="tag-text">AUTH_SECURITY</text>
   </g>
 
-  <!-- Spaced Bullet Points -->
-  <g transform="translate(30, 96)">
-    <text x="0" y="12" class="mono-text" fill="#00FFCC">&gt;</text>
-    <text x="15" y="12" class="mono-text bullet-point">Developed and optimized 5+ scalable modules, improving responsiveness by <tspan fill="#00FFCC" font-weight="bold">30%</tspan>.</text>
-    
-    <text x="0" y="35" class="mono-text" fill="#00FFCC">&gt;</text>
-    <text x="15" y="35" class="mono-text bullet-point">Built 4 real-time visual dashboards, boosting client platform engagement by <tspan fill="#ffffff" font-weight="bold">25%</tspan>.</text>
-    
-    <text x="0" y="58" class="mono-text" fill="#00FFCC">&gt;</text>
-    <text x="15" y="58" class="mono-text bullet-point">Implemented secure auth verification controls and robust input validation forms.</text>
+  <!-- Bullet Points -->
+  <g transform="translate(28, 108)">
+    <text x="0" y="12" class="bullet-icon">&#9656;</text>
+    <text x="16" y="12" class="bullet-text">Developed and optimized 5+ scalable web modules in React &amp; MUI, boosting responsiveness by 30%.</text>
+
+    <text x="0" y="38" class="bullet-icon">&#9656;</text>
+    <text x="16" y="38" class="bullet-text">Built 4 interactive real-time data visualization dashboards, increasing user engagement by 25%.</text>
+
+    <text x="0" y="64" class="bullet-icon">&#9656;</text>
+    <text x="16" y="64" class="bullet-text">Implemented secure authentication workflows and form validation to guarantee data integrity.</text>
   </g>
 
-  <!-- Visual Widget Panel (Right) -->
-  <g transform="translate(670, 30)">
-    <rect width="130" height="120" fill="#0c0e15" stroke="#00FFCC" stroke-width="1.2" stroke-opacity="0.2" rx="4" />
-    <text x="65" y="18" text-anchor="middle" class="tag-text" fill="#627289" font-size="9">UI_MODULE_MOCKUP</text>
-    
-    <!-- Outer screen border -->
-    <rect x="12" y="27" width="106" height="70" fill="none" stroke="#627289" stroke-opacity="0.3" rx="2" />
-    
-    <!-- Top Nav bar in mockup -->
-    <rect x="12" y="27" width="106" height="8" fill="#141a24" />
-    <circle cx="18" cy="31" r="1.5" fill="#FF3366" />
-    <circle cx="22" cy="31" r="1.5" fill="#00FFCC" />
-    <rect x="80" y="29" width="30" height="4" fill="#627289" opacity="0.3" rx="1"/>
+  <!-- Right Telemetry Widget (Dashboard Wireframe) -->
+  <g transform="translate(654, 22)">
+    <rect width="162" height="146" rx="10" fill="#ffffff" fill-opacity="0.92" stroke="#7dd3fc" stroke-width="1.2" />
+    <text x="81" y="22" text-anchor="middle" class="tag-text" fill="#0284c7">UI_TELEMETRY</text>
+    <line x1="16" y1="30" x2="146" y2="30" stroke="#e0f2fe" stroke-width="1.5" />
 
-    <!-- Side Panel -->
-    <rect x="12" y="35" width="22" height="62" fill="#111621" opacity="0.5" />
-    <rect x="15" y="42" width="16" height="3" fill="#00FFCC" opacity="0.4" />
-    <rect x="15" y="50" width="16" height="3" fill="#627289" opacity="0.4" />
-    <rect x="15" y="58" width="16" height="3" fill="#627289" opacity="0.4" />
+    <!-- Mini Dashboard Wireframe -->
+    <rect x="20" y="38" width="122" height="68" rx="4" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.2" />
+    <rect x="20" y="38" width="122" height="10" rx="2" fill="#e0f2fe" />
+    <circle cx="27" cy="43" r="2" fill="#0284c7" />
+    <circle cx="34" cy="43" r="2" fill="#38bdf8" />
 
-    <!-- Grid Items inside mockup -->
-    <rect x="38" y="39" width="46" height="24" fill="#141a24" stroke="#00FFCC" stroke-width="0.5" stroke-opacity="0.6" rx="1" />
-    <path d="M 40 55 Q 50 43, 60 50 T 80 44" fill="none" stroke="#00FFCC" stroke-width="0.8" />
-    
-    <rect x="88" y="39" width="24" height="24" fill="#141a24" stroke="#8A2BE2" stroke-width="0.5" stroke-opacity="0.6" rx="1" />
-    <circle cx="100" cy="51" r="4" fill="none" stroke="#8A2BE2" stroke-width="1" />
-    
-    <!-- Table -->
-    <rect x="38" y="67" width="74" height="26" fill="#141a24" stroke="#627289" stroke-opacity="0.3" rx="1" />
-    <line x1="38" y1="73" x2="112" y2="73" stroke="#627289" stroke-opacity="0.3" stroke-width="0.5" />
-    <line x1="38" y1="80" x2="112" y2="80" stroke="#627289" stroke-opacity="0.3" stroke-width="0.5" />
-    <rect x="42" y="70" width="20" height="2" fill="#00FFCC" opacity="0.5" />
-    <rect x="42" y="76" width="30" height="2" fill="#627289" opacity="0.5" />
-    <rect x="42" y="83" width="15" height="2" fill="#627289" opacity="0.5" />
+    <!-- Mini Charts inside Wireframe -->
+    <rect x="26" y="54" width="66" height="24" rx="2" fill="#ffffff" stroke="#bae6fd" stroke-width="1" />
+    <path d="M 30 72 L 44 62 L 58 67 L 74 57 L 86 60" fill="none" stroke="#0284c7" stroke-width="1.5" />
 
-    <!-- Bottom label -->
-    <text x="65" y="115" text-anchor="middle" class="tag-text" font-size="8" fill="#00FFCC">RESPONSIVENESS: +30%</text>
+    <rect x="98" y="54" width="38" height="24" rx="2" fill="#ffffff" stroke="#bae6fd" stroke-width="1" />
+    <circle cx="117" cy="66" r="7" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="28, 14" />
+
+    <rect x="26" y="83" width="110" height="16" rx="2" fill="#e0f2fe" />
+    <rect x="30" y="88" width="50" height="6" rx="3" fill="#0284c7" />
+
+    <!-- Bottom Metric Pill -->
+    <rect x="16" y="114" width="130" height="20" rx="5" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1" />
+    <text x="81" y="127.5" text-anchor="middle" class="tag-text" fill="#0369a1">UX SPEED: +30%</text>
   </g>
 </svg>

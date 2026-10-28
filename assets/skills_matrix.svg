@@ -1,180 +1,152 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 840 300" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="310" viewBox="0 0 840 310" fill="none">
   <defs>
-    <!-- Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080a10" />
-      <stop offset="100%" stop-color="#0a0c14" />
+      <stop offset="0%" stop-color="#f8fbff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
     </linearGradient>
-    
-    <!-- Grid Pattern -->
-    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00FFCC" stroke-width="0.5" stroke-opacity="0.04" />
+    <linearGradient id="barBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="barIndigo" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#60a5fa" />
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#0284c7" stroke-width="0.5" stroke-opacity="0.07" />
     </pattern>
-    
-    <!-- Glow Filters -->
-    <filter id="tealGlow" x="-10%" y="-10%" width="120%" height="120%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
   </defs>
 
   <style>
-    .mono-text {
-      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      fill: #ffffff;
-      font-size: 11.5px;
-      letter-spacing: 0.5px;
-    }
-    
     .hud-title {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      font-weight: 700;
-      fill: #00FFCC;
-      font-size: 12.5px;
+      font-weight: 800;
+      fill: #0f172a;
+      font-size: 13px;
       letter-spacing: 2px;
     }
-
-    .tech-header {
+    .col-header {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      font-weight: 700;
-      fill: #8A2BE2;
-      font-size: 11px;
-      letter-spacing: 1px;
+      font-weight: 800;
+      fill: #0284c7;
+      font-size: 11.5px;
+      letter-spacing: 1.2px;
     }
-
-    .progress-bar-bg {
-      fill: #141923;
+    .skill-name {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 700;
+      fill: #1e293b;
+      font-size: 11.5px;
+    }
+    .skill-pct {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 700;
+      fill: #0284c7;
+      font-size: 11.5px;
+    }
+    .track {
+      fill: #e0f2fe;
     }
   </style>
 
-  <!-- Background Base -->
-  <rect width="840" height="300" fill="url(#bgGrad)" rx="8" />
-  <rect width="840" height="300" fill="url(#grid)" rx="8" />
-  
-  <!-- Outer Border -->
-  <rect x="10" y="10" width="820" height="280" fill="none" stroke="#00FFCC" stroke-width="1.2" stroke-opacity="0.15" rx="6" />
+  <!-- Background -->
+  <rect width="840" height="310" rx="14" fill="url(#bgGrad)" stroke="#bae6fd" stroke-width="1.5" />
+  <rect width="840" height="310" rx="14" fill="url(#grid)" />
 
-  <!-- Section Title -->
-  <g transform="translate(30, 35)">
-    <text x="0" y="0" class="hud-title">&lt; SYSTEM_COGNITIVE_CAPABILITIES &gt;</text>
-    <line x1="0" y1="10" x2="780" y2="10" stroke="#00FFCC" stroke-width="1" stroke-opacity="0.15" />
+  <!-- Header Bar -->
+  <text x="28" y="34" class="hud-title">&lt; COGNITIVE_CAPABILITIES &amp; TECH_MATRIX &gt;</text>
+  <line x1="28" y1="44" x2="812" y2="44" stroke="#bae6fd" stroke-width="1.5" />
+
+  <!-- COLUMN 1: LANGUAGES & CORE (x=24, width=252) -->
+  <g transform="translate(24, 58)">
+    <rect width="252" height="228" rx="10" fill="#ffffff" fill-opacity="0.9" stroke="#bae6fd" stroke-width="1.2" />
+    <text x="18" y="26" class="col-header">01 // LANGUAGES &amp; CORE</text>
+    <line x1="18" y1="34" x2="234" y2="34" stroke="#f0f9ff" stroke-width="1.5" />
+
+    <!-- Item 1 -->
+    <text x="18" y="56" class="skill-name">PYTHON</text>
+    <text x="234" y="56" text-anchor="end" class="skill-pct">95%</text>
+    <rect x="18" y="63" width="216" height="6" rx="3" class="track" />
+    <rect x="18" y="63" width="205" height="6" rx="3" fill="url(#barBlue)" />
+
+    <!-- Item 2 -->
+    <text x="18" y="98" class="skill-name">JAVASCRIPT / TS</text>
+    <text x="234" y="98" text-anchor="end" class="skill-pct">88%</text>
+    <rect x="18" y="105" width="216" height="6" rx="3" class="track" />
+    <rect x="18" y="105" width="190" height="6" rx="3" fill="url(#barIndigo)" />
+
+    <!-- Item 3 -->
+    <text x="18" y="140" class="skill-name">JAVA &amp; OOP</text>
+    <text x="234" y="140" text-anchor="end" class="skill-pct">82%</text>
+    <rect x="18" y="147" width="216" height="6" rx="3" class="track" />
+    <rect x="18" y="147" width="177" height="6" rx="3" fill="url(#barBlue)" />
+
+    <!-- Item 4 -->
+    <text x="18" y="182" class="skill-name">C++ / DSA / SQL</text>
+    <text x="234" y="182" text-anchor="end" class="skill-pct">80%</text>
+    <rect x="18" y="189" width="216" height="6" rx="3" class="track" />
+    <rect x="18" y="189" width="173" height="6" rx="3" fill="url(#barIndigo)" />
   </g>
 
-  <!-- COLUMN 1: LANGUAGES & CS -->
-  <g transform="translate(30, 65)">
-    <text x="0" y="15" class="tech-header" fill="#00FFCC">1. LANGUAGES_AND_DATA</text>
-    
-    <!-- Python -->
-    <g transform="translate(0, 32)">
-      <text x="0" y="10" class="mono-text">PYTHON</text>
-      <text x="175" y="10" class="mono-text" fill="#00FFCC" font-weight="bold">95%</text>
-      <rect x="0" y="18" width="200" height="5" class="progress-bar-bg" rx="2.5" />
-      <rect x="0" y="18" width="190" height="5" fill="#00FFCC" rx="2.5" filter="url(#tealGlow)" />
-    </g>
+  <!-- COLUMN 2: AI & ML ORCHESTRATION (x=294, width=252) -->
+  <g transform="translate(294, 58)">
+    <rect width="252" height="228" rx="10" fill="#ffffff" fill-opacity="0.9" stroke="#bae6fd" stroke-width="1.2" />
+    <text x="18" y="26" class="col-header" fill="#2563eb">02 // AI_ORCHESTRATION</text>
+    <line x1="18" y1="34" x2="234" y2="34" stroke="#f0f9ff" stroke-width="1.5" />
 
-    <!-- JavaScript -->
-    <g transform="translate(0, 72)">
-      <text x="0" y="10" class="mono-text">JAVASCRIPT</text>
-      <text x="175" y="10" class="mono-text" fill="#8A2BE2" font-weight="bold">85%</text>
-      <rect x="0" y="18" width="200" height="5" class="progress-bar-bg" rx="2.5" />
-      <rect x="0" y="18" width="170" height="5" fill="#8A2BE2" rx="2.5" />
-    </g>
+    <!-- Item 1 -->
+    <text x="18" y="56" class="skill-name">LANGCHAIN &amp; AGENTS</text>
+    <text x="234" y="56" text-anchor="end" class="skill-pct">92%</text>
+    <rect x="18" y="63" width="216" height="6" rx="3" class="track" />
+    <rect x="18" y="63" width="198" height="6" rx="3" fill="url(#barIndigo)" />
 
-    <!-- Java -->
-    <g transform="translate(0, 112)">
-      <text x="0" y="10" class="mono-text">JAVA</text>
-      <text x="175" y="10" class="mono-text" fill="#8A2BE2" font-weight="bold">80%</text>
-      <rect x="0" y="18" width="200" height="5" class="progress-bar-bg" rx="2.5" />
-      <rect x="0" y="18" width="160" height="5" fill="#8A2BE2" rx="2.5" />
-    </g>
+    <!-- Item 2 -->
+    <text x="18" y="98" class="skill-name">TENSORFLOW &amp; PYTORCH</text>
+    <text x="234" y="98" text-anchor="end" class="skill-pct">85%</text>
+    <rect x="18" y="105" width="216" height="6" rx="3" class="track" />
+    <rect x="18" y="105" width="184" height="6" rx="3" fill="url(#barBlue)" />
 
-    <!-- C++ -->
-    <g transform="translate(0, 152)">
-      <text x="0" y="10" class="mono-text">C++</text>
-      <text x="175" y="10" class="mono-text" fill="#8A2BE2" font-weight="bold">75%</text>
-      <rect x="0" y="18" width="200" height="5" class="progress-bar-bg" rx="2.5" />
-      <rect x="0" y="18" width="150" height="5" fill="#8A2BE2" rx="2.5" />
-    </g>
+    <!-- Item 3 -->
+    <text x="18" y="140" class="skill-name">PANDAS / NUMPY / DATA</text>
+    <text x="234" y="140" text-anchor="end" class="skill-pct">88%</text>
+    <rect x="18" y="147" width="216" height="6" rx="3" class="track" />
+    <rect x="18" y="147" width="190" height="6" rx="3" fill="url(#barIndigo)" />
+
+    <!-- Item 4 -->
+    <text x="18" y="182" class="skill-name">EXPLAINABLE AI (SHAP)</text>
+    <text x="234" y="182" text-anchor="end" class="skill-pct">85%</text>
+    <rect x="18" y="189" width="216" height="6" rx="3" class="track" />
+    <rect x="18" y="189" width="184" height="6" rx="3" fill="url(#barBlue)" />
   </g>
 
-  <!-- COLUMN 2: AI & ML -->
-  <g transform="translate(305, 65)">
-    <text x="0" y="15" class="tech-header" fill="#8A2BE2">2. AI_ORCHESTRATION</text>
-    
-    <!-- LangChain -->
-    <g transform="translate(0, 32)">
-      <text x="0" y="10" class="mono-text">LANGCHAIN &amp; AGENTIC SDKs</text>
-      <text x="175" y="10" class="mono-text" fill="#00FFCC" font-weight="bold">90%</text>
-      <rect x="0" y="18" width="200" height="5" class="progress-bar-bg" rx="2.5" />
-      <rect x="0" y="18" width="180" height="5" fill="#00FFCC" rx="2.5" filter="url(#tealGlow)" />
-    </g>
+  <!-- COLUMN 3: WEB & CLOUD SYSTEMS (x=564, width=252) -->
+  <g transform="translate(564, 58)">
+    <rect width="252" height="228" rx="10" fill="#ffffff" fill-opacity="0.9" stroke="#bae6fd" stroke-width="1.2" />
+    <text x="18" y="26" class="col-header" fill="#0369a1">03 // WEB &amp; CLOUD_SYS</text>
+    <line x1="18" y1="34" x2="234" y2="34" stroke="#f0f9ff" stroke-width="1.5" />
 
-    <!-- PyTorch / TF -->
-    <g transform="translate(0, 72)">
-      <text x="0" y="10" class="mono-text">PYTORCH &amp; TENSORFLOW</text>
-      <text x="175" y="10" class="mono-text" fill="#8A2BE2" font-weight="bold">80%</text>
-      <rect x="0" y="18" width="200" height="5" class="progress-bar-bg" rx="2.5" />
-      <rect x="0" y="18" width="160" height="5" fill="#8A2BE2" rx="2.5" />
-    </g>
+    <!-- Item 1 -->
+    <text x="18" y="56" class="skill-name">REACT.JS &amp; NODE.JS</text>
+    <text x="234" y="56" text-anchor="end" class="skill-pct">88%</text>
+    <rect x="18" y="63" width="216" height="6" rx="3" class="track" />
+    <rect x="18" y="63" width="190" height="6" rx="3" fill="url(#barBlue)" />
 
-    <!-- Streamlit / Pandas -->
-    <g transform="translate(0, 112)">
-      <text x="0" y="10" class="mono-text">STREAMLIT &amp; PANDAS</text>
-      <text x="175" y="10" class="mono-text" fill="#8A2BE2" font-weight="bold">85%</text>
-      <rect x="0" y="18" width="200" height="5" class="progress-bar-bg" rx="2.5" />
-      <rect x="0" y="18" width="170" height="5" fill="#8A2BE2" rx="2.5" />
-    </g>
+    <!-- Item 2 -->
+    <text x="18" y="98" class="skill-name">REST APIs &amp; ASYNC</text>
+    <text x="234" y="98" text-anchor="end" class="skill-pct">90%</text>
+    <rect x="18" y="105" width="216" height="6" rx="3" class="track" />
+    <rect x="18" y="105" width="194" height="6" rx="3" fill="url(#barIndigo)" />
 
-    <!-- SHAP / IG -->
-    <g transform="translate(0, 152)">
-      <text x="0" y="10" class="mono-text">EXPLAINABLE AI (SHAP)</text>
-      <text x="175" y="10" class="mono-text" fill="#8A2BE2" font-weight="bold">80%</text>
-      <rect x="0" y="18" width="200" height="5" class="progress-bar-bg" rx="2.5" />
-      <rect x="0" y="18" width="160" height="5" fill="#8A2BE2" rx="2.5" />
-    </g>
+    <!-- Item 3 -->
+    <text x="18" y="140" class="skill-name">STREAMLIT &amp; UI MODULES</text>
+    <text x="234" y="140" text-anchor="end" class="skill-pct">90%</text>
+    <rect x="18" y="147" width="216" height="6" rx="3" class="track" />
+    <rect x="18" y="147" width="194" height="6" rx="3" fill="url(#barBlue)" />
+
+    <!-- Item 4 -->
+    <text x="18" y="182" class="skill-name">GIT / LINUX / GCP</text>
+    <text x="234" y="182" text-anchor="end" class="skill-pct">86%</text>
+    <rect x="18" y="189" width="216" height="6" rx="3" class="track" />
+    <rect x="18" y="189" width="186" height="6" rx="3" fill="url(#barIndigo)" />
   </g>
-
-  <!-- COLUMN 3: WEB & TOOLS -->
-  <g transform="translate(580, 65)">
-    <text x="0" y="15" class="tech-header" fill="#e200ff">3. WEB_SYSTEMS_AND_TOOLS</text>
-    
-    <!-- React / Node -->
-    <g transform="translate(0, 32)">
-      <text x="0" y="10" class="mono-text">REACT.JS &amp; NODE.JS</text>
-      <text x="175" y="10" class="mono-text" fill="#00FFCC" font-weight="bold">85%</text>
-      <rect x="0" y="18" width="200" height="5" class="progress-bar-bg" rx="2.5" />
-      <rect x="0" y="18" width="170" height="5" fill="#00FFCC" rx="2.5" filter="url(#tealGlow)" />
-    </g>
-
-    <!-- GCP / Cloud -->
-    <g transform="translate(0, 72)">
-      <text x="0" y="10" class="mono-text">GCP / CLOUD WORKLOADS</text>
-      <text x="175" y="10" class="mono-text" fill="#8A2BE2" font-weight="bold">80%</text>
-      <rect x="0" y="18" width="200" height="5" class="progress-bar-bg" rx="2.5" />
-      <rect x="0" y="18" width="160" height="5" fill="#8A2BE2" rx="2.5" />
-    </g>
-
-    <!-- Git/GitHub -->
-    <g transform="translate(0, 112)">
-      <text x="0" y="10" class="mono-text">GIT / GITHUB &amp; WORKFLOWS</text>
-      <text x="175" y="10" class="mono-text" fill="#00FFCC" font-weight="bold">90%</text>
-      <rect x="0" y="18" width="200" height="5" class="progress-bar-bg" rx="2.5" />
-      <rect x="0" y="18" width="180" height="5" fill="#00FFCC" rx="2.5" filter="url(#tealGlow)" />
-    </g>
-
-    <!-- API Integration -->
-    <g transform="translate(0, 152)">
-      <text x="0" y="10" class="mono-text">REST APIs &amp; INTEGRATION</text>
-      <text x="175" y="10" class="mono-text" fill="#00FFCC" font-weight="bold">90%</text>
-      <rect x="0" y="18" width="200" height="5" class="progress-bar-bg" rx="2.5" />
-      <rect x="0" y="18" width="180" height="5" fill="#00FFCC" rx="2.5" filter="url(#tealGlow)" />
-    </g>
-  </g>
-
-  <!-- Small corner decorations inside the grid boundary -->
-  <path d="M 15 285 L 15 275 L 25 275" fill="none" stroke="#00FFCC" stroke-width="1.2" stroke-opacity="0.3" />
-  <path d="M 825 285 L 825 275 L 815 275" fill="none" stroke="#00FFCC" stroke-width="1.2" stroke-opacity="0.3" />
 </svg>
