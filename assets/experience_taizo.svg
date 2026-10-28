@@ -2,7 +2,7 @@
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#f8fbff" />
-      <stop offset="100%" stop-color="#e0f2fe" />
+      <stop offset="100%" stop-color="#dbeafe" />
     </linearGradient>
     <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#0284c7" />
@@ -11,6 +11,12 @@
     <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
       <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0284c7" stroke-width="0.5" stroke-opacity="0.06" />
     </pattern>
+    <clipPath id="leftTextClip">
+      <rect x="0" y="0" width="600" height="190" />
+    </clipPath>
+    <clipPath id="rightBoxClip">
+      <rect x="0" y="0" width="184" height="148" rx="10" />
+    </clipPath>
   </defs>
 
   <style>
@@ -19,7 +25,7 @@
       font-weight: 700;
       fill: #0284c7;
       font-size: 11px;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.2px;
     }
     .proj-title {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -36,7 +42,7 @@
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       font-weight: 700;
       fill: #0369a1;
-      font-size: 10px;
+      font-size: 9.5px;
     }
     .bullet-icon {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -47,73 +53,75 @@
     .bullet-text {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       font-weight: 500;
-      fill: #334155;
-      font-size: 12.5px;
+      fill: #1e293b;
+      font-size: 12px;
     }
   </style>
 
   <!-- Card Background -->
-  <rect width="840" height="190" rx="14" fill="url(#bgGrad)" stroke="#bae6fd" stroke-width="1.5" />
+  <rect width="840" height="190" rx="14" fill="url(#bgGrad)" stroke="#93c5fd" stroke-width="1.5" />
   <rect width="840" height="190" rx="14" fill="url(#grid)" />
 
   <!-- Left Accent Bar -->
-  <rect x="0" y="24" width="5" height="142" rx="2.5" fill="url(#blueGrad)" />
+  <rect x="0" y="24" width="6" height="142" rx="3" fill="url(#blueGrad)" />
 
-  <!-- Header & Title -->
-  <text x="28" y="32" class="hud-header">[ MODULE_04 // PROFESSIONAL_EXPERIENCE | MAY – JUN 2025 ]</text>
-  <text x="28" y="56" class="proj-title">Taizo.in – Frontend Development Intern (Remote)</text>
+  <!-- Left Content Area (Strictly clipped at X=600) -->
+  <g clip-path="url(#leftTextClip)">
+    <text x="26" y="32" class="hud-header">[ MODULE_04 // PROFESSIONAL_EXPERIENCE | MAY – JUN 2025 ]</text>
+    <text x="26" y="56" class="proj-title">Taizo.in – Frontend Development Intern (Remote)</text>
 
-  <!-- Tech Stack Pills -->
-  <g transform="translate(28, 68)">
-    <rect x="0" y="0" width="72" height="20" rx="5" class="tag-bg" />
-    <text x="36" y="13.5" text-anchor="middle" class="tag-text">REACT.JS</text>
+    <!-- Tech Stack Pills -->
+    <g transform="translate(26, 68)">
+      <rect x="0" y="0" width="70" height="20" rx="5" class="tag-bg" />
+      <text x="35" y="13.5" text-anchor="middle" class="tag-text">REACT.JS</text>
 
-    <rect x="80" y="0" width="90" height="20" rx="5" class="tag-bg" />
-    <text x="125" y="13.5" text-anchor="middle" class="tag-text">MATERIAL_UI</text>
+      <rect x="78" y="0" width="88" height="20" rx="5" class="tag-bg" />
+      <text x="122" y="13.5" text-anchor="middle" class="tag-text">MATERIAL_UI</text>
 
-    <rect x="178" y="0" width="110" height="20" rx="5" class="tag-bg" />
-    <text x="233" y="13.5" text-anchor="middle" class="tag-text">DATA_DASHBOARDS</text>
+      <rect x="174" y="0" width="106" height="20" rx="5" class="tag-bg" />
+      <text x="227" y="13.5" text-anchor="middle" class="tag-text">DATA_DASHBOARDS</text>
 
-    <rect x="296" y="0" width="96" height="20" rx="5" class="tag-bg" />
-    <text x="344" y="13.5" text-anchor="middle" class="tag-text">AUTH_SECURITY</text>
+      <rect x="288" y="0" width="94" height="20" rx="5" class="tag-bg" />
+      <text x="335" y="13.5" text-anchor="middle" class="tag-text">AUTH_SECURITY</text>
+    </g>
+
+    <!-- Concise Bullet Points (<540px wide) -->
+    <g transform="translate(26, 108)">
+      <text x="0" y="12" class="bullet-icon">&#9656;</text>
+      <text x="16" y="12" class="bullet-text">Developed 5+ scalable React &amp; MUI web modules (+30% responsiveness).</text>
+
+      <text x="0" y="38" class="bullet-icon">&#9656;</text>
+      <text x="16" y="38" class="bullet-text">Built 4 real-time visual dashboards, increasing user engagement by 25%.</text>
+
+      <text x="0" y="64" class="bullet-icon">&#9656;</text>
+      <text x="16" y="64" class="bullet-text">Implemented secure authentication workflows and form validation controls.</text>
+    </g>
   </g>
 
-  <!-- Bullet Points -->
-  <g transform="translate(28, 108)">
-    <text x="0" y="12" class="bullet-icon">&#9656;</text>
-    <text x="16" y="12" class="bullet-text">Developed and optimized 5+ scalable web modules in React &amp; MUI, boosting responsiveness by 30%.</text>
-
-    <text x="0" y="38" class="bullet-icon">&#9656;</text>
-    <text x="16" y="38" class="bullet-text">Built 4 interactive real-time data visualization dashboards, increasing user engagement by 25%.</text>
-
-    <text x="0" y="64" class="bullet-icon">&#9656;</text>
-    <text x="16" y="64" class="bullet-text">Implemented secure authentication workflows and form validation to guarantee data integrity.</text>
-  </g>
-
-  <!-- Right Telemetry Widget (Dashboard Wireframe) -->
-  <g transform="translate(654, 22)">
-    <rect width="162" height="146" rx="10" fill="#ffffff" fill-opacity="0.92" stroke="#7dd3fc" stroke-width="1.2" />
-    <text x="81" y="22" text-anchor="middle" class="tag-text" fill="#0284c7">UI_TELEMETRY</text>
-    <line x1="16" y1="30" x2="146" y2="30" stroke="#e0f2fe" stroke-width="1.5" />
+  <!-- Right Telemetry Widget (Dashboard Wireframe, 184px wide) -->
+  <g transform="translate(634, 21)" clip-path="url(#rightBoxClip)">
+    <rect width="184" height="148" rx="10" fill="#ffffff" fill-opacity="0.95" stroke="#7dd3fc" stroke-width="1.5" />
+    <text x="92" y="22" text-anchor="middle" class="tag-text" fill="#0284c7">UI_TELEMETRY</text>
+    <line x1="16" y1="30" x2="168" y2="30" stroke="#dbeafe" stroke-width="1.5" />
 
     <!-- Mini Dashboard Wireframe -->
-    <rect x="20" y="38" width="122" height="68" rx="4" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.2" />
-    <rect x="20" y="38" width="122" height="10" rx="2" fill="#e0f2fe" />
+    <rect x="20" y="38" width="144" height="68" rx="4" fill="#f8fafc" stroke="#bae6fd" stroke-width="1.2" />
+    <rect x="20" y="38" width="144" height="10" rx="2" fill="#e0f2fe" />
     <circle cx="27" cy="43" r="2" fill="#0284c7" />
     <circle cx="34" cy="43" r="2" fill="#38bdf8" />
 
     <!-- Mini Charts inside Wireframe -->
-    <rect x="26" y="54" width="66" height="24" rx="2" fill="#ffffff" stroke="#bae6fd" stroke-width="1" />
-    <path d="M 30 72 L 44 62 L 58 67 L 74 57 L 86 60" fill="none" stroke="#0284c7" stroke-width="1.5" />
+    <rect x="28" y="54" width="76" height="24" rx="2" fill="#ffffff" stroke="#bae6fd" stroke-width="1" />
+    <path d="M 32 72 L 48 62 L 64 67 L 82 57 L 98 60" fill="none" stroke="#0284c7" stroke-width="1.5" />
 
-    <rect x="98" y="54" width="38" height="24" rx="2" fill="#ffffff" stroke="#bae6fd" stroke-width="1" />
-    <circle cx="117" cy="66" r="7" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="28, 14" />
+    <rect x="110" y="54" width="46" height="24" rx="2" fill="#ffffff" stroke="#bae6fd" stroke-width="1" />
+    <circle cx="133" cy="66" r="7" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="28, 14" />
 
-    <rect x="26" y="83" width="110" height="16" rx="2" fill="#e0f2fe" />
-    <rect x="30" y="88" width="50" height="6" rx="3" fill="#0284c7" />
+    <rect x="28" y="83" width="128" height="16" rx="2" fill="#e0f2fe" />
+    <rect x="32" y="88" width="65" height="6" rx="3" fill="#0284c7" />
 
     <!-- Bottom Metric Pill -->
-    <rect x="16" y="114" width="130" height="20" rx="5" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1" />
-    <text x="81" y="127.5" text-anchor="middle" class="tag-text" fill="#0369a1">UX SPEED: +30%</text>
+    <rect x="16" y="114" width="152" height="22" rx="5" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1" />
+    <text x="92" y="128.5" text-anchor="middle" class="tag-text" fill="#0369a1">UX SPEED: +30% GAIN</text>
   </g>
 </svg>

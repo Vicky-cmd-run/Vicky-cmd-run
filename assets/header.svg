@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="270" viewBox="0 0 840 270" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="260" viewBox="0 0 840 260" fill="none">
   <defs>
     <!-- Soft Futuristic Light Blue Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#f8fbff" />
-      <stop offset="50%" stop-color="#f0f7ff" />
-      <stop offset="100%" stop-color="#e0f2fe" />
+      <stop offset="50%" stop-color="#eff6ff" />
+      <stop offset="100%" stop-color="#dbeafe" />
     </linearGradient>
 
     <!-- Blue Accent Gradient -->
@@ -16,19 +16,19 @@
 
     <!-- Card Surface Gradient -->
     <linearGradient id="panelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#f0f9ff" stop-opacity="0.75" />
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#f0f9ff" stop-opacity="0.88" />
     </linearGradient>
-
-    <!-- Subtle Blue Glow -->
-    <filter id="blueGlow" x="-15%" y="-15%" width="130%" height="130%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0284c7" flood-opacity="0.14" />
-    </filter>
 
     <!-- Grid Pattern -->
     <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
       <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#0284c7" stroke-width="0.6" stroke-opacity="0.08" />
     </pattern>
+
+    <!-- Strict Clip Path for Left Console Box -->
+    <clipPath id="consoleClip">
+      <rect x="40" y="114" width="520" height="104" rx="10" />
+    </clipPath>
   </defs>
 
   <style>
@@ -36,24 +36,24 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-weight: 800;
       fill: #0f172a;
-      font-size: 36px;
-      letter-spacing: 3px;
+      font-size: 34px;
+      letter-spacing: 2px;
     }
     .hero-sub {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-weight: 600;
+      font-weight: 700;
       fill: #0284c7;
-      font-size: 13px;
-      letter-spacing: 2px;
+      font-size: 12px;
+      letter-spacing: 1.5px;
     }
     .mono-label {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       font-weight: 700;
       fill: #0369a1;
-      font-size: 12px;
+      font-size: 11.5px;
     }
     .mono-val {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       font-weight: 600;
       fill: #1e293b;
       font-size: 12px;
@@ -61,78 +61,74 @@
     .tag-chip {
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       font-weight: 700;
-      fill: #0284c7;
+      fill: #0369a1;
       font-size: 10px;
-      letter-spacing: 0.8px;
     }
     @keyframes blink {
       0%, 100% { opacity: 1; }
       50% { opacity: 0; }
     }
     @keyframes pulse {
-      0%, 100% { opacity: 0.85; }
+      0%, 100% { opacity: 0.9; }
       50% { opacity: 0.35; }
     }
     .cursor { animation: blink 1.1s infinite; }
-    .pulser { animation: pulse 2.8s infinite ease-in-out; }
+    .pulser { animation: pulse 2.5s infinite ease-in-out; }
   </style>
 
   <!-- Main Card Background -->
-  <rect width="840" height="270" rx="14" fill="url(#bgGrad)" stroke="#bae6fd" stroke-width="1.5" />
-  <rect width="840" height="270" rx="14" fill="url(#grid)" />
+  <rect width="840" height="260" rx="14" fill="url(#bgGrad)" stroke="#93c5fd" stroke-width="1.5" />
+  <rect width="840" height="260" rx="14" fill="url(#grid)" />
 
   <!-- Top Accent Gradient Bar -->
-  <path d="M 14 1.5 L 826 1.5" stroke="url(#blueGrad)" stroke-width="3" stroke-linecap="round" />
+  <path d="M 14 2 L 826 2" stroke="url(#blueGrad)" stroke-width="3.5" stroke-linecap="round" />
 
   <!-- Futuristic HUD Corner Brackets -->
-  <path d="M 16 36 L 16 16 L 36 16" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" />
-  <path d="M 824 36 L 824 16 L 804 16" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" />
-  <path d="M 16 234 L 16 254 L 36 254" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" />
-  <path d="M 824 234 L 824 254 L 804 254" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 16 34 L 16 16 L 34 16" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 824 34 L 824 16 L 806 16" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 16 226 L 16 244 L 34 244" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M 824 226 L 824 244 L 806 244" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" />
 
   <!-- Top Status Bar -->
-  <circle cx="42" cy="34" r="4" fill="#0284c7" class="pulser" />
-  <text x="54" y="38" class="hero-sub">NEURAL INTERFACE // ONLINE</text>
-  <rect x="708" y="23" width="96" height="22" rx="11" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1" />
-  <text x="756" y="38" text-anchor="middle" class="tag-chip">v3.0 LIGHT</text>
+  <circle cx="42" cy="34" r="4.5" fill="#0284c7" class="pulser" />
+  <text x="54" y="38" class="hero-sub">NEURAL INTERFACE // ACTIVE</text>
+  <rect x="696" y="22" width="108" height="22" rx="11" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1" />
+  <text x="750" y="36.5" text-anchor="middle" class="tag-chip">LIGHT HUD v3.2</text>
 
   <!-- Main Name & Subtitle -->
-  <text x="42" y="84" class="hero-title">VIGNESH G A</text>
-  <rect x="42" y="96" width="85" height="3.5" rx="1.75" fill="url(#blueGrad)" />
-  <text x="138" y="101" class="mono-label" fill="#2563eb">AI &amp; PROMPT ENGINEER | AGENTIC AI ARCHITECT</text>
+  <text x="40" y="80" class="hero-title">VIGNESH G A</text>
+  <rect x="40" y="92" width="76" height="3.5" rx="1.75" fill="url(#blueGrad)" />
+  <text x="128" y="97" class="hero-sub" fill="#1d4ed8">AI &amp; PROMPT ENGINEER | AGENTIC AI ARCHITECT</text>
 
-  <!-- Left Console Box (Strict Column X-Coordinates to prevent any overlap) -->
-  <rect x="42" y="116" width="540" height="106" rx="10" fill="url(#panelGrad)" stroke="#bae6fd" stroke-width="1.2" filter="url(#blueGlow)" />
+  <!-- Left Console Box (Max width=520, strictly separated from right radar at x=600) -->
+  <rect x="40" y="114" width="520" height="104" rx="10" fill="url(#panelGrad)" stroke="#93c5fd" stroke-width="1.2" />
+  <g clip-path="url(#consoleClip)">
+    <text x="56" y="137" class="mono-label">&gt; PRIMARY_CORE</text>
+    <text x="195" y="137" class="mono-val">Autonomous Multi-Agent Systems &amp; AI</text>
 
-  <!-- Row 1 -->
-  <text x="58" y="140" class="mono-label">&gt; PRIMARY_CORE</text>
-  <text x="215" y="140" class="mono-val">Autonomous Multi-Agent Systems &amp; AI</text>
+    <text x="56" y="160" class="mono-label">&gt; NEURAL_ENGINE</text>
+    <text x="195" y="160" class="mono-val">LLM Orchestration, RAG &amp; RUL Predictors</text>
 
-  <!-- Row 2 -->
-  <text x="58" y="164" class="mono-label">&gt; NEURAL_ENGINE</text>
-  <text x="215" y="164" class="mono-val">LLM Orchestration, RAG &amp; RUL Predictors</text>
+    <text x="56" y="183" class="mono-label">&gt; ACADEMIA_NODE</text>
+    <text x="195" y="183" class="mono-val">VIT-AP (B.Tech CSE) x IIT Ropar (Minor AI)</text>
 
-  <!-- Row 3 -->
-  <text x="58" y="188" class="mono-label">&gt; ACADEMIC_VECTOR</text>
-  <text x="215" y="188" class="mono-val">VIT-AP (B.Tech CSE) x IIT Ropar (Minor AI)</text>
+    <text x="56" y="206" class="mono-label">&gt; SYSTEM_STATUS</text>
+    <text x="195" y="206" class="mono-val" fill="#0284c7">ONLINE &amp; SYNCHRONIZED (100%)</text>
+    <rect x="398" y="195" width="7" height="13" fill="#0284c7" class="cursor" />
+  </g>
 
-  <!-- Row 4 -->
-  <text x="58" y="210" class="mono-label">&gt; SYSTEM_STATUS</text>
-  <text x="215" y="210" class="mono-val" fill="#0284c7">SYNCHRONIZED (100%)</text>
-  <rect x="372" y="199" width="7" height="13" fill="#0284c7" class="cursor" />
-
-  <!-- Right Futuristic Radar / AI Core Graphic -->
-  <g transform="translate(696, 150)">
-    <circle cx="0" cy="0" r="68" fill="#ffffff" fill-opacity="0.7" stroke="#bae6fd" stroke-width="1.2" filter="url(#blueGlow)" />
-    <circle cx="0" cy="0" r="54" fill="none" stroke="#0284c7" stroke-width="1.8" stroke-dasharray="14, 24" stroke-opacity="0.65">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite" />
+  <!-- Right Futuristic Radar / AI Core Graphic (Centered at x=695, y=148) -->
+  <g transform="translate(695, 148)">
+    <circle cx="0" cy="0" r="68" fill="#ffffff" fill-opacity="0.88" stroke="#93c5fd" stroke-width="1.2" />
+    <circle cx="0" cy="0" r="54" fill="none" stroke="#0284c7" stroke-width="1.8" stroke-dasharray="14, 22" stroke-opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="18s" repeatCount="indefinite" />
     </circle>
-    <circle cx="0" cy="0" r="40" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="60, 28" stroke-opacity="0.75">
-      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="12s" repeatCount="indefinite" />
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="55, 25" stroke-opacity="0.8">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="11s" repeatCount="indefinite" />
     </circle>
-    <circle cx="0" cy="0" r="26" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="4, 6" />
-    <circle cx="0" cy="0" r="12" fill="url(#blueGrad)">
-      <animate attributeName="r" values="9;13;9" dur="3s" repeatCount="indefinite" />
+    <circle cx="0" cy="0" r="25" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="4, 6" />
+    <circle cx="0" cy="0" r="11" fill="url(#blueGrad)">
+      <animate attributeName="r" values="8;13;8" dur="2.8s" repeatCount="indefinite" />
     </circle>
     <!-- Radar Crosshairs -->
     <line x1="-62" y1="0" x2="-46" y2="0" stroke="#0284c7" stroke-width="1.2" stroke-opacity="0.45" />
@@ -141,15 +137,15 @@
     <line x1="0" y1="46" x2="0" y2="62" stroke="#0284c7" stroke-width="1.2" stroke-opacity="0.45" />
   </g>
 
-  <!-- Bottom Pill Badges (Fixed X-Positions) -->
-  <g transform="translate(42, 233)">
-    <rect x="0" y="0" width="168" height="22" rx="6" fill="#e0f2fe" stroke="#bae6fd" stroke-width="1" />
-    <text x="84" y="14.5" text-anchor="middle" class="tag-chip">COGNITION: MULTI-AGENT</text>
+  <!-- Bottom Pill Badges -->
+  <g transform="translate(40, 226)">
+    <rect x="0" y="0" width="166" height="20" rx="5" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1" />
+    <text x="83" y="13.5" text-anchor="middle" class="tag-chip">COGNITION: MULTI-AGENT</text>
 
-    <rect x="180" y="0" width="168" height="22" rx="6" fill="#e0f2fe" stroke="#bae6fd" stroke-width="1" />
-    <text x="264" y="14.5" text-anchor="middle" class="tag-chip">EXPLAINABLE: SHAP / IG</text>
+    <rect x="176" y="0" width="166" height="20" rx="5" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1" />
+    <text x="259" y="13.5" text-anchor="middle" class="tag-chip">EXPLAINABLE: SHAP / IG</text>
 
-    <rect x="360" y="0" width="180" height="22" rx="6" fill="#e0f2fe" stroke="#bae6fd" stroke-width="1" />
-    <text x="450" y="14.5" text-anchor="middle" class="tag-chip">STACK: PYTHON / REACT.JS</text>
+    <rect x="352" y="0" width="168" height="20" rx="5" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1" />
+    <text x="436" y="13.5" text-anchor="middle" class="tag-chip">STACK: PYTHON / REACT</text>
   </g>
 </svg>
